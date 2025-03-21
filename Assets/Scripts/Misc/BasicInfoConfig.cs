@@ -1,19 +1,18 @@
 using UnityEngine;
+using UnityEngine.Localization;
 
 namespace WinterUniverse
 {
     public abstract class BasicInfoConfig : ScriptableObject
     {
         [SerializeField] protected string _id;
-        [SerializeField] protected string _displayName;
-        [SerializeField, TextArea] protected string _description;
-        [SerializeField] protected Color _color = Color.white;
+        [SerializeField] protected LocalizedString _displayName;
+        [SerializeField] protected LocalizedString _description;
         [SerializeField] protected Sprite _icon;
 
         public string ID => _id;
-        public string DisplayName => _displayName;
-        public string Description => _description;
-        public Color Color => _color;
+        public LocalizedString DisplayName => _displayName;
+        public LocalizedString Description => _description;
         public Sprite Icon => _icon;
     }
 }

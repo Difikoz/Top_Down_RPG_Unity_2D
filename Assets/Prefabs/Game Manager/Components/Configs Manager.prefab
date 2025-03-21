@@ -1,0 +1,89 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5253242358220836410
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3652597389030358789}
+  - component: {fileID: 7681249783572855948}
+  m_Layer: 0
+  m_Name: Configs Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3652597389030358789
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253242358220836410}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7681249783572855948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5253242358220836410}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8248fe809b267f4449e808e9ca61fbb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _stats:
+  - {fileID: 11400000, guid: 1816a172cb67a354d95a366d5eef9dcf, type: 2}
+  - {fileID: 11400000, guid: eeda25c7fefd3824fac1bdbed931004d, type: 2}
+  - {fileID: 11400000, guid: b3ad1856d3c488b42b944abae62b793e, type: 2}
+  - {fileID: 11400000, guid: e3bf62fe43b2b6146ac92cc242736143, type: 2}
+  - {fileID: 11400000, guid: 63dcde4229c7e7442b63cbf96f6bf960, type: 2}
+  - {fileID: 11400000, guid: a1d332986beb09041bafaffff6c80163, type: 2}
+  - {fileID: 11400000, guid: f129e568e2337f34e966a0e453a622fb, type: 2}
+  - {fileID: 11400000, guid: f72a3f178f539964abb6421a2e70ffdb, type: 2}
+  - {fileID: 11400000, guid: 97426b0264f3d1e489595e8a13bfe0ac, type: 2}
+  - {fileID: 11400000, guid: a1500008d2dbe2346832f4f3c6c53866, type: 2}
+  - {fileID: 11400000, guid: 34373d7267092de468eb7fdceb3f02fa, type: 2}
+  _states:
+  - {fileID: 11400000, guid: 874e97204af5a3e4592dc978a96aee6c, type: 2}
+  - {fileID: 11400000, guid: c36d5299bb7637c45a0c5e183e3f8f92, type: 2}
+  - {fileID: 11400000, guid: ad16149c972f46046b19735847eef90d, type: 2}
+  - {fileID: 11400000, guid: e875742bb6bacbc4491f1701712c4106, type: 2}
+  - {fileID: 11400000, guid: 8c2956bc35eb6ec48814d3e704c5c34a, type: 2}
+  - {fileID: 11400000, guid: fb833c1f3c6358c4b89b9f9511729f00, type: 2}
+  _factions:
+  - {fileID: 11400000, guid: 722ba0eb4f91e0249af31ac12749cf44, type: 2}
+  - {fileID: 11400000, guid: e31193ee7d63110468095536910ae5a8, type: 2}
+  _meleeWeapons:
+  - {fileID: 11400000, guid: be2f34485b5f25d4b8d4b8e265188829, type: 2}
+  - {fileID: 11400000, guid: 25c44c2b7d9b0324aaeeca3e2e80e552, type: 2}
+  _rangedWeapons:
+  - {fileID: 11400000, guid: 795ec065d51d4c94ba25b7cd0fe63d57, type: 2}
+  - {fileID: 11400000, guid: f37f6a3f102d02b4fb6c3c31ee182f44, type: 2}
+  _armors:
+  - {fileID: 11400000, guid: 7b7f57495efcea346a0ec8194cab992e, type: 2}
+  _ammo:
+  - {fileID: 11400000, guid: 0bf9b135591a32f4c8d9feb36e1f72dc, type: 2}
+  - {fileID: 11400000, guid: 34263df29bfc807458ff7ca305f0c8dc, type: 2}
+  - {fileID: 11400000, guid: 60b786b89529eaa4d9fba9dec9874de0, type: 2}
+  - {fileID: 11400000, guid: 6d08f5a4471de424fa7e8a2d01a8f4a9, type: 2}
+  - {fileID: 11400000, guid: 19247dc628be4b24b87971575c7b6948, type: 2}
+  - {fileID: 11400000, guid: 9c917b37c7d16ec44bbbb514b29a5d4a, type: 2}
+  - {fileID: 11400000, guid: 96da13a00e567114da8571b56adc4f3d, type: 2}
+  - {fileID: 11400000, guid: b51a336fdfb09d14f84141510df2c776, type: 2}
+  _consumables:
+  - {fileID: 11400000, guid: e5f192cf87c912b4c9b7bda109d6bb4c, type: 2}
+  _resources:
+  - {fileID: 11400000, guid: ebce06abcc4513c4ba1b3f7f4de951d8, type: 2}

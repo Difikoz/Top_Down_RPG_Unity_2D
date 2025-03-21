@@ -11,9 +11,9 @@ TagManager:
   - Pawn
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Interactable
+  - Damageable
+  - Damage
   - 
   - 
   - 
@@ -38,8 +38,14 @@ TagManager:
   - 
   - WorldSpaceUI
   m_SortingLayers:
+  - name: Ground
+    uniqueID: 87394381
+    locked: 0
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Roof
+    uniqueID: 3227230629
     locked: 0
   m_RenderingLayers:
   - Default

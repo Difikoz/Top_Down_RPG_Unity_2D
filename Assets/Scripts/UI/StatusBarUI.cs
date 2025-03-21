@@ -1,59 +1,58 @@
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 namespace WinterUniverse
 {
     public class StatusBarUI : BasicComponent
     {
-        [SerializeField] private List<GameObject> _pages = new();
+        [SerializeField] private TMP_Text _pageNameText;
+        [SerializeField] private List<StatusPageUI> _pages = new();
 
         private int _currentPageIndex;
-        private EquipmentBarUI _equipmentBar;
-        private InventoryBarUI _inventoryBar;
-        private JournalBarUI _journalBar;
-        private FactionsBarUI _factionsBar;
-        private MapBarUI _mapBar;
+        private EquipmentStatusPageUI _equipmentPage;
+        private InventoryStatusPageUI _inventoryPage;
+        private JournalStatusPageUI _journalPage;
+        private FactionsStatusPageUI _factionsPage;
+        private MapStatusPageUI _mapPage;
 
-        public EquipmentBarUI EquipmentBar => _equipmentBar;
-        public InventoryBarUI InventoryBar => _inventoryBar;
-        public JournalBarUI JournalBar => _journalBar;
-        public FactionsBarUI FactionsBar => _factionsBar;
-        public MapBarUI MapBar => _mapBar;
+        public EquipmentStatusPageUI EquipmentPage => _equipmentPage;
+        public InventoryStatusPageUI InventoryPage => _inventoryPage;
+        public JournalStatusPageUI JournalPage => _journalPage;
+        public FactionsStatusPageUI FactionsPage => _factionsPage;
+        public MapStatusPageUI MapPage => _mapPage;
 
         public override void Initialize()
         {
             base.Initialize();
-            _equipmentBar = GetComponentInChildren<EquipmentBarUI>();
-            _inventoryBar = GetComponentInChildren<InventoryBarUI>();
-            _journalBar = GetComponentInChildren<JournalBarUI>();
-            _factionsBar = GetComponentInChildren<FactionsBarUI>();
-            _mapBar = GetComponentInChildren<MapBarUI>();
-            _equipmentBar.Initialize();
-            _inventoryBar.Initialize();
-            _journalBar.Initialize();
-            _factionsBar.Initialize();
-            _mapBar.Initialize();
+            _equipmentPage = GetComponentInChildren<EquipmentStatusPageUI>();
+            _inventoryPage = GetComponentInChildren<InventoryStatusPageUI>();
+            _journalPage = GetComponentInChildren<JournalStatusPageUI>();
+            _factionsPage = GetComponentInChildren<FactionsStatusPageUI>();
+            _mapPage = GetComponentInChildren<MapStatusPageUI>();
+            foreach (StatusPageUI page in _pages)
+            {
+                page.Initialize();
+            }
         }
 
         public override void Enable()
         {
             base.Enable();
-            _equipmentBar.Enable();
-            _inventoryBar.Enable();
-            _journalBar.Enable();
-            _factionsBar.Enable();
-            _mapBar.Enable();
+            foreach (StatusPageUI page in _pages)
+            {
+                page.Enable();
+            }
             ShowTab(0);
             gameObject.SetActive(false);
         }
 
         public override void Disable()
         {
-            _equipmentBar.Disable();
-            _inventoryBar.Disable();
-            _journalBar.Disable();
-            _factionsBar.Disable();
-            _mapBar.Disable();
+            foreach (StatusPageUI page in _pages)
+            {
+                page.Disable();
+            }
             base.Disable();
         }
 
@@ -86,8 +85,9 @@ namespace WinterUniverse
             _currentPageIndex = index;
             for (int i = 0; i < _pages.Count; i++)
             {
-                _pages[i].SetActive(i == _currentPageIndex);
+                _pages[i].gameObject.SetActive(i == _currentPageIndex);
             }
+            _pageNameText.text = _pages[_currentPageIndex].PageName.GetLocalizedString();
         }
     }
 }
