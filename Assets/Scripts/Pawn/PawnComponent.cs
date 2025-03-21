@@ -2,28 +2,14 @@ using UnityEngine;
 
 namespace WinterUniverse
 {
-    public abstract class PawnComponent : MonoBehaviour
+    public abstract class PawnComponent : BasicComponent
     {
         protected PawnController _pawn;
 
-        public virtual void Initialize()
+        public override void Initialize()
         {
+            base.Initialize();
             _pawn = GetComponent<PawnController>();
-        }
-
-        public virtual void Enable()
-        {
-
-        }
-
-        public virtual void Disable()
-        {
-
-        }
-
-        public virtual void OnFixedUpdate()
-        {
-
         }
     }
 }

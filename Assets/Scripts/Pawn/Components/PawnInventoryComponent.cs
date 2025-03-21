@@ -10,6 +10,8 @@ namespace WinterUniverse
 
         private List<ItemStack> _stacks;
 
+        public List<ItemStack> Stacks => _stacks;
+
         public override void Initialize()
         {
             base.Initialize();

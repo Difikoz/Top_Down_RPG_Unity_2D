@@ -14,6 +14,7 @@ namespace WinterUniverse
 
         public void PlayAction(string name, float fadeTime = 0.1f, bool isPerfomingAction = true)
         {
+            _pawn.Status.StateHolder.SetStateValue("Is Perfoming Action", isPerfomingAction);
             _animator.CrossFade(name, fadeTime);
         }
 

@@ -39,6 +39,10 @@ namespace WinterUniverse
             {
                 return;
             }
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (_meleeWeaponSlot.Config != null && addOldToInventory)
             {
                 _pawn.Inventory.AddItem(_meleeWeaponSlot.Config);
@@ -57,6 +61,10 @@ namespace WinterUniverse
             {
                 return;
             }
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (_rangedWeaponSlot.Config != null && addOldToInventory)
             {
                 _pawn.Inventory.AddItem(_rangedWeaponSlot.Config);
@@ -72,6 +80,10 @@ namespace WinterUniverse
 
         public void EquipArmor(ArmorItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
         {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (_armorSlot.Config != null && addOldToInventory)
             {
                 _pawn.Inventory.AddItem(_armorSlot.Config);
@@ -86,6 +98,10 @@ namespace WinterUniverse
 
         public void EquipAmmo(AmmoItemConfig config)
         {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (_rangedWeaponSlot.Config == null || !_rangedWeaponSlot.Config.UsingAmmo.Contains(config))
             {
                 return;
@@ -168,6 +184,10 @@ namespace WinterUniverse
 
         public void ToggleWeaponSlot(WeaponType type)
         {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (_meleeWeaponSlot.IsPerfomingAction || _rangedWeaponSlot.IsPerfomingAction)
             {
                 return;
@@ -187,6 +207,10 @@ namespace WinterUniverse
 
         public void PerformWeaponAction()
         {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
             if (!_meleeWeaponSlot.CanAttack() || !_rangedWeaponSlot.CanFire())
             {
                 return;

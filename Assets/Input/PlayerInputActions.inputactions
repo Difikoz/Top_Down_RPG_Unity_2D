@@ -296,7 +296,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Previous",
+                    "name": "PreviousTab",
                     "type": "Button",
                     "id": "fc2ef63a-6755-4da3-8f00-2bddaab5cee9",
                     "expectedControlType": "",
@@ -305,7 +305,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Next",
+                    "name": "NextTab",
                     "type": "Button",
                     "id": "89f7d9dd-3ef1-41ad-8e1b-85a6bd120c41",
                     "expectedControlType": "",
@@ -520,7 +520,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Previous",
+                    "action": "PreviousTab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -542,7 +542,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "Next",
+                    "action": "NextTab",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

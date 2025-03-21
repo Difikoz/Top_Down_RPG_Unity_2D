@@ -21,12 +21,12 @@ namespace WinterUniverse
         {
             if (_config != null)
             {
-                //_pawn.StatHolder.RemoveStatModifiers(_config.Modifiers);
+                _pawn.Status.StatHolder.RemoveStatModifiers(_config.Modifiers);
             }
             _config = config;
             if (_config != null)
             {
-                //_pawn.StatHolder.AddStatModifiers(_config.Modifiers);
+                _pawn.Status.StatHolder.AddStatModifiers(_config.Modifiers);
             }
         }
 
