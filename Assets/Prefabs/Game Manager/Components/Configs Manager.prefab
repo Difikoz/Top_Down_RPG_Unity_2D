@@ -63,6 +63,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: e875742bb6bacbc4491f1701712c4106, type: 2}
   - {fileID: 11400000, guid: 8c2956bc35eb6ec48814d3e704c5c34a, type: 2}
   - {fileID: 11400000, guid: fb833c1f3c6358c4b89b9f9511729f00, type: 2}
+  _stateCreators:
+  - {fileID: 11400000, guid: b22266f26e242c34497b04cfd4109a73, type: 2}
   _factions:
   - {fileID: 11400000, guid: 722ba0eb4f91e0249af31ac12749cf44, type: 2}
   - {fileID: 11400000, guid: e31193ee7d63110468095536910ae5a8, type: 2}

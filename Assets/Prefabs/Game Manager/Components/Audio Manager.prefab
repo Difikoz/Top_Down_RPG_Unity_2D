@@ -179,7 +179,8 @@ MonoBehaviour:
   _ambientSource: {fileID: 4425493821633438733}
   _soundSource: {fileID: 7894905669853009458}
   _ambientFadeSpeed: 0.5
-  _ambientClips: []
+  _ambientClips:
+  - {fileID: 8300000, guid: d53d6acc1efce1e4296fdd63d421a1a1, type: 3}
   _errorClip: {fileID: 0}
 --- !u!1 &8850603347695995062
 GameObject:

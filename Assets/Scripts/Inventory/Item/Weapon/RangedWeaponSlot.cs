@@ -13,6 +13,7 @@ namespace WinterUniverse
         private int _ammoInMag;
         private Coroutine _fireCoroutine;
         private Coroutine _reloadCoroutine;
+        private float _spread;
 
         public RangedWeaponItemConfig Config => _config;
         public int AmmoInMag => _ammoInMag;
@@ -121,12 +122,11 @@ namespace WinterUniverse
 
         private IEnumerator FireCoroutine()
         {
-            float spread;
             for (int i = 0; i < _config.ProjectilesPerShot; i++)
             {
-                spread = Random.Range(-_config.Spread, _config.Spread);
-                spread += _shootPoint.transform.eulerAngles.z;
-                //GameManager.StaticInstance.PrefabsManager.GetProjectile(_shootPoint.transform.position, Quaternion.Euler(spread)).Initialize(_player, _weaponConfig, _ammoConfig);
+                _spread = Random.Range(-_config.Spread, _config.Spread);
+                _spread += _shootPoint.transform.eulerAngles.z;
+                GameManager.StaticInstance.PrefabsManager.GetProjectile(_shootPoint.transform.position, Quaternion.Euler(0f, 0f, _spread)).Initialize(_pawn, _config, _pawn.Equipment.AmmoSlot.Config);
             }
             yield return new WaitForSeconds(60f / _config.FireRate);
             _fireCoroutine = null;

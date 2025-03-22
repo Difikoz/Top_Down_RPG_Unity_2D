@@ -10,26 +10,26 @@ namespace WinterUniverse
 
         private MeleeWeaponSlotUI _meleeWeaponSlot;
         private RangedWeaponSlotUI _rangedWeaponSlot;
+        private AmmoSlotUI _ammoSlot;
         private HelmetSlotUI _helmetSlot;
         private ChestSlotUI _chestSlot;
         private BeltSlotUI _beltSlot;
         private PantsSlotUI _pantsSlot;
         private GlovesSlotUI _glovesSlot;
         private BootsSlotUI _bootsSlot;
-        private AmmoSlotUI _ammoSlot;
 
         public override void Initialize()
         {
             base.Initialize();
             _meleeWeaponSlot = GetComponentInChildren<MeleeWeaponSlotUI>();
             _rangedWeaponSlot = GetComponentInChildren<RangedWeaponSlotUI>();
+            _ammoSlot = GetComponentInChildren<AmmoSlotUI>();
             _helmetSlot = GetComponentInChildren<HelmetSlotUI>();
             _chestSlot = GetComponentInChildren<ChestSlotUI>();
             _beltSlot = GetComponentInChildren<BeltSlotUI>();
             _pantsSlot = GetComponentInChildren<PantsSlotUI>();
             _glovesSlot = GetComponentInChildren<GlovesSlotUI>();
             _bootsSlot = GetComponentInChildren<BootsSlotUI>();
-            _ammoSlot = GetComponentInChildren<AmmoSlotUI>();
         }
 
         public override void Enable()
@@ -49,13 +49,13 @@ namespace WinterUniverse
         {
             _meleeWeaponSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.MeleeWeaponSlot.Config);
             _rangedWeaponSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.RangedWeaponSlot.Config);
+            _ammoSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.AmmoSlot.Config);
             _helmetSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.HelmetSlot.Config);
             _chestSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.ChestSlot.Config);
-            _beltSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.BackpackSlot.Config);
+            _beltSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.BeltSlot.Config);
             _pantsSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.PantsSlot.Config);
             _glovesSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.GlovesSlot.Config);
             _bootsSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.BootsSlot.Config);
-            _ammoSlot.Initialize(GameManager.StaticInstance.ControllersManager.Player.Equipment.AmmoSlot.Config);
         }
 
         public void ShowFullInformation(ItemConfig config)

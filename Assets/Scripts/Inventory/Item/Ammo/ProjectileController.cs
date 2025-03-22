@@ -9,6 +9,7 @@ namespace WinterUniverse
     {
         [SerializeField] private Rigidbody2D _rb;
         [SerializeField] private SpriteRenderer _spriteRenderer;
+        [SerializeField] private WeaponDamageCollider _collider;
 
         private PawnController _owner;
         private RangedWeaponItemConfig _weaponConfig;
@@ -17,6 +18,9 @@ namespace WinterUniverse
 
         public void Initialize(PawnController owner, RangedWeaponItemConfig weapon, AmmoItemConfig ammo)
         {
+            _collider.Initialize();
+            _collider.Initialize(owner, weapon.DamageTypes, ammo.DamageEffects, ammo.DamageMultiplier);
+            _collider.Enable();
             _owner = owner;
             _weaponConfig = weapon;
             _ammoConfig = ammo;
@@ -24,33 +28,30 @@ namespace WinterUniverse
             _spriteRenderer.sprite = _ammoConfig.ProjectileSprite;
             _rb.linearVelocity = transform.right * _weaponConfig.Force * _ammoConfig.ForceMultiplier;
             StartCoroutine(DespawnCoroutine());
+            _collider.OnHit += OnHit;
         }
 
         private IEnumerator DespawnCoroutine()
         {
-            yield return new WaitForSeconds(_weaponConfig.Range * _ammoConfig.RangeMultiplier / _weaponConfig.Force * _ammoConfig.ForceMultiplier);
+            yield return new WaitForSeconds(_weaponConfig.Range / _weaponConfig.Force * _ammoConfig.ForceMultiplier * 1.1f);
             Despawn();
         }
 
-        private void OnTriggerEnter2D(Collider2D other)
+        private void OnHit()
         {
-            PawnController target = other.GetComponentInParent<PawnController>();
-            if (target != null)
+            _pierceCount++;
+            if (_pierceCount > _weaponConfig.PierceCount + _ammoConfig.PierceCount)
             {
-                // apply damage with source as player
-                // read damage from weapon and ammo multiplier
-                // add knockback to target
-                _pierceCount++;
-                if (_pierceCount > _weaponConfig.PierceCount + _ammoConfig.PierceCount)
-                {
-                    Despawn();
-                }
+                Despawn();
             }
         }
 
         private void Despawn()
         {
+            _collider.OnHit -= OnHit;
             _rb.linearVelocity = Vector2.zero;
+            _collider.Disable();
+            _collider.ClearDamagedTargets();
             LeanPool.Despawn(gameObject);
         }
     }

@@ -30,6 +30,7 @@ namespace WinterUniverse
             {
                 s.Value.CalculateCurrentValue();
             }
+            OnStatsChanged?.Invoke();
         }
 
         public Stat GetStat(string id)

@@ -41,7 +41,7 @@ namespace WinterUniverse
             {
                 return;
             }
-            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipBackpack();
+            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipBelt();
         }
 
         public void OnSubmit(BaseEventData eventData)
@@ -50,7 +50,7 @@ namespace WinterUniverse
             {
                 return;
             }
-            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipBackpack();
+            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipBelt();
         }
     }
 }

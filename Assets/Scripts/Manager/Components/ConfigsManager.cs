@@ -7,6 +7,7 @@ namespace WinterUniverse
     {
         [SerializeField] private List<StatConfig> _stats = new();
         [SerializeField] private List<StateKeyConfig> _states = new();
+        [SerializeField] private List<StateCreatorConfig> _stateCreators = new();
         [SerializeField] private List<FactionConfig> _factions = new();
         [SerializeField] private List<MeleeWeaponItemConfig> _meleeWeapons = new();
         [SerializeField] private List<RangedWeaponItemConfig> _rangedWeapons = new();
@@ -50,6 +51,18 @@ namespace WinterUniverse
             {
                 _items.Add(config);
             }
+        }
+
+        public StateCreatorConfig GetStateCreator(string id)
+        {
+            foreach (StateCreatorConfig config in _stateCreators)
+            {
+                if (config.ID == id)
+                {
+                    return config;
+                }
+            }
+            return null;
         }
 
         public FactionConfig GetFaction(string id)

@@ -4,7 +4,13 @@ namespace WinterUniverse
 {
     public class PawnAnimatorComponent : PawnComponent
     {
+        [SerializeField] private Transform _bodyPoint;
+        [SerializeField] private Transform _headPoint;
+
         private Animator _animator;
+
+        public Transform BodyPoint => _bodyPoint;
+        public Transform HeadPoint => _headPoint;
 
         public override void Initialize()
         {
@@ -21,6 +27,16 @@ namespace WinterUniverse
         public void SetFloat(string name, float value)
         {
             _animator.SetFloat(name, value);
+        }
+
+        public void EnableMeleeWeaponCollider()
+        {
+            _pawn.Equipment.MeleeWeaponSlot.EnableDamageCollider();
+        }
+
+        public void DisableMeleeWeaponCollider()
+        {
+            _pawn.Equipment.MeleeWeaponSlot.DisableDamageCollider();
         }
     }
 }

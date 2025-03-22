@@ -26,8 +26,8 @@ namespace WinterUniverse
             _effectHolder = new(_pawn);
             _statHolder = new();
             _stateHolder = new();
-            //_statHolder.CreateStats();
-            //_stateHolder.CreateStates();
+            _statHolder.CreateStats(GameManager.StaticInstance.ConfigsManager.Stats);
+            _stateHolder.CreateStates(GameManager.StaticInstance.ConfigsManager.States);
             Revive();
         }
 
