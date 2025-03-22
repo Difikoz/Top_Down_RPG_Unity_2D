@@ -46,6 +46,10 @@ namespace WinterUniverse
 
         public override void OnHitTarget(Collider2D collider, PawnController target)
         {
+            if (UnityEngine.Random.value < target.Status.StatHolder.GetStat("EVADE").CurrentValue / 100f)
+            {
+                return;
+            }
             foreach (DamageType dt in _damageTypes)
             {
                 target.Status.ReduceHealthCurrent(dt.Damage * _damageMultiplier, dt.Type, _owner);

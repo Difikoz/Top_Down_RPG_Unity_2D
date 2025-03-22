@@ -141,7 +141,7 @@ namespace WinterUniverse
 
         private IEnumerator ReloadCoroutine()
         {
-            yield return new WaitForSeconds(_config.ReloadTime);
+            yield return new WaitForSeconds(_config.ReloadTime / _pawn.Status.StatHolder.GetStat("RLDSPD").CurrentValue / 100f);
             if (_config != null && _pawn.Equipment.AmmoSlot.Config != null)
             {
                 int ammoDif = _config.MagSize - _ammoInMag;

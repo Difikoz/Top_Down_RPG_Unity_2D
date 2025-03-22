@@ -29,26 +29,26 @@ namespace WinterUniverse
         public override void Enable()
         {
             base.Enable();
-            //GameManager.StaticInstance.ControllersManager.Player.Faction.OnFactionChanged += OnFactionChanged;
+            GameManager.StaticInstance.ControllersManager.Player.Status.OnFactionChanged += OnFactionChanged;
             OnFactionChanged();
         }
 
         public override void Disable()
         {
-            //GameManager.StaticInstance.ControllersManager.Player.Faction.OnFactionChanged -= OnFactionChanged;
+            GameManager.StaticInstance.ControllersManager.Player.Status.OnFactionChanged -= OnFactionChanged;
             base.Disable();
         }
 
         private void OnFactionChanged()
         {
             //_playerFactionNameText.text = GameManager.StaticInstance.ControllersManager.Player.Faction.Config.DisplayName;
-            //int index = 0;
-            //foreach (FactionRelationship fr in GameManager.StaticInstance.ControllersManager.Player.Faction.Config.Relationships)
-            //{
-            //    ShowFullInformation(fr);
-            //    _slots[index].Initialize(fr);
-            //    index++;
-            //}
+            int index = 0;
+            foreach (FactionRelationship fr in GameManager.StaticInstance.ControllersManager.Player.Status.Faction.Relationships)
+            {
+                ShowFullInformation(fr);
+                _slots[index].Initialize(fr);
+                index++;
+            }
         }
 
         public void ShowFullInformation(FactionRelationship relationship)

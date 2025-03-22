@@ -15,18 +15,18 @@ MonoBehaviour:
   _id: Pistol
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:688013e7525c6654eba8a697877b5c4f
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5619265536
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:079f6c9f4c5502f4a94eb726062151a2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3488559104
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -40,7 +40,6 @@ MonoBehaviour:
   _weaponSprite: {fileID: 0}
   _weaponType: 1
   _damageTypes: []
-  _knockback: 1
   _modifiers: []
   _attackEffects: []
   _shootPointOffset: {x: 1.75, y: 0.25, z: 0}

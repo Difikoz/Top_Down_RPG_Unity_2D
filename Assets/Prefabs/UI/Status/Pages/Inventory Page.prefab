@@ -314,9 +314,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _pageName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:f0a646708ef102041869232f4fab2d9c
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 34023092224
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0

@@ -15,24 +15,24 @@ MonoBehaviour:
   _id: Bread
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:76a243f04159e2b48b81f6d5429c1537
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 6693007360
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:e4083b54047ff414ca3b8b8366135c7d
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5308887040
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: 0}
-  _visualSprite: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 3
   _stackSize: 1
   _weight: 1

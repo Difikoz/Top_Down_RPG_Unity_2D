@@ -4,6 +4,8 @@ namespace WinterUniverse
 {
     public class CameraManager : BasicComponent
     {
+        [SerializeField] private float _followSpeed = 10f;
+
         private PlayerInputActions _inputActions;
         private PlayerController _player;
         private Camera _camera;
@@ -35,8 +37,9 @@ namespace WinterUniverse
 
         public override void OnFixedUpdate()
         {
-            _player.Input.LookPoint = _camera.ScreenToWorldPoint(_cursorInput);
             base.OnFixedUpdate();
+            _player.Input.LookPoint = _camera.ScreenToWorldPoint(_cursorInput);
+            transform.position = Vector3.Lerp(transform.position, _player.Animator.BodyPoint.position, _followSpeed * Time.fixedDeltaTime);
         }
     }
 }

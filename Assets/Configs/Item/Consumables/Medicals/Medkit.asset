@@ -15,24 +15,24 @@ MonoBehaviour:
   _id: Medkit
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:d4e831a86f43f0042955942a95fa631a
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3945738240
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:4ba1560550fe4b0499bbfae86be05ed6
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 4520357888
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: 0}
-  _visualSprite: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 3
   _stackSize: 1
   _weight: 1

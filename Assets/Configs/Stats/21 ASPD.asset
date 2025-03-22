@@ -13,11 +13,29 @@ MonoBehaviour:
   m_Name: 21 ASPD
   m_EditorClassIdentifier: 
   _id: ASPD
-  _displayName: Attack Speed
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4024a4fb9826ff54e86da1673298a6b9
+    m_TableEntryReference:
+      m_KeyId: 182941855744
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:43b89bb20012497419a10d6a98af7f37
+    m_TableEntryReference:
+      m_KeyId: 44630487040
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
   _baseValue: 100
   _minValue: 0
   _maxValue: 999999
   _isPercent: 1
+  references:
+    version: 2
+    RefIds: []

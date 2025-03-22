@@ -112,17 +112,6 @@ namespace WinterUniverse
         public void SetInputMode(InputMode mode)
         {
             _inputMode = mode;
-            switch (_inputMode)
-            {
-                case InputMode.Game:
-                    Cursor.lockState = CursorLockMode.Locked;
-                    Cursor.visible = false;
-                    break;
-                case InputMode.UI:
-                    Cursor.lockState = CursorLockMode.Confined;
-                    Cursor.visible = true;
-                    break;
-            }
         }
     }
 }

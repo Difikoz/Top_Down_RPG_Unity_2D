@@ -4,6 +4,9 @@ namespace WinterUniverse
 {
     public class PlayerController : PawnController
     {
+        [SerializeField] private FactionConfig _startingFaction;
+        [SerializeField] private InventoryConfig _startingInventory;
+
         private PlayerInputActions _inputActions;
         private bool _primaryActionInput;
         private bool _secondaryActionInput;
@@ -12,6 +15,11 @@ namespace WinterUniverse
         {
             base.Initialize();
             _inputActions = new();
+            _status.ChangeFaction(_startingFaction);
+            foreach (ItemStack stack in _startingInventory.Stacks)
+            {
+                _inventory.AddItem(stack);
+            }
         }
 
         public override void Enable()
@@ -38,6 +46,12 @@ namespace WinterUniverse
 
         public override void OnFixedUpdate()
         {
+            base.OnFixedUpdate();
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                _input.MoveDirection = Vector2.zero;
+                return;
+            }
             _input.MoveDirection = _inputActions.Pawn.Move.ReadValue<Vector2>();
             if (_equipment.CurrentWeaponType == WeaponType.Melee)
             {
@@ -57,12 +71,14 @@ namespace WinterUniverse
             {
                 _equipment.PerformWeaponAction();
             }
-            base.OnFixedUpdate();
         }
 
         private void OnInteractPerfomed()
         {
-
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                return;
+            }
         }
     }
 }

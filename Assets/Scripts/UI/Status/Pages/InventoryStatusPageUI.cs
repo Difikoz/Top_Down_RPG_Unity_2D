@@ -26,6 +26,7 @@ namespace WinterUniverse
 
         private void OnInventoryChanged()
         {
+            ShowFullInformation(null);
             while (_contentRoot.childCount > 0)
             {
                 LeanPool.Despawn(_contentRoot.GetChild(0).gameObject);

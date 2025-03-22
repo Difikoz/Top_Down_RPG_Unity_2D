@@ -88,8 +88,28 @@ PrefabInstance:
     m_TransformParent: {fileID: 376467688346818857}
     m_Modifications:
     - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _fillColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _fillColor.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _fillColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
       propertyPath: _vitalityName
       value: Stamina
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _vitalityNameID.m_TableEntryReference.m_KeyId
+      value: 27043770368
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _vitalityNameID.m_TableReference.m_TableCollectionName
+      value: GUID:fffa005dc58491d4baa8549c2e5886c3
       objectReference: {fileID: 0}
     - target: {fileID: 1436513753469242305, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
       propertyPath: m_Name
@@ -205,8 +225,24 @@ PrefabInstance:
     m_TransformParent: {fileID: 376467688346818857}
     m_Modifications:
     - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _fillColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _fillColor.g
+      value: 0.50980395
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
       propertyPath: _vitalityName
       value: Health
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _vitalityNameID.m_TableEntryReference.m_KeyId
+      value: 6533623808
+      objectReference: {fileID: 0}
+    - target: {fileID: 1207018630283509645, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
+      propertyPath: _vitalityNameID.m_TableReference.m_TableCollectionName
+      value: GUID:fffa005dc58491d4baa8549c2e5886c3
       objectReference: {fileID: 0}
     - target: {fileID: 1436513753469242305, guid: f71751c1be22671438ac71aeb9fbbcaa, type: 3}
       propertyPath: m_Name

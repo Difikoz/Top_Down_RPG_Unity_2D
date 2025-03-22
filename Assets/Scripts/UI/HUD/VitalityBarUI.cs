@@ -1,13 +1,14 @@
 using System.Collections;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization;
 using UnityEngine.UI;
 
 namespace WinterUniverse
 {
     public class VitalityBarUI : MonoBehaviour
     {
-        [SerializeField] private string _vitalityName = "Vitality";
+        [SerializeField] private LocalizedString _vitalityNameID;
         [SerializeField] private TMP_Text _valueText;
         [SerializeField] private Image _backgroundImage;
         [SerializeField] private Image _backgroundFillImage;
@@ -36,7 +37,7 @@ namespace WinterUniverse
         {
             _currentValue = current;
             _maxValue = max;
-            _valueText.text = $"{_vitalityName}: {_currentValue:0}/{_maxValue:0}";
+            _valueText.text = $"{_vitalityNameID.GetLocalizedString()}: {_currentValue:0}/{_maxValue:0}";
             if (_coroutine != null)
             {
                 StopCoroutine(_coroutine);

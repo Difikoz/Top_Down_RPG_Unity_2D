@@ -13,17 +13,35 @@ MonoBehaviour:
   m_Name: 9x18 002
   m_EditorClassIdentifier: 
   _id: 9x18 002
-  _displayName: 9x18 N
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:9e833d4b6f6aec344874653bfd66eb52
+    m_TableEntryReference:
+      m_KeyId: 174557442048
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:95f7b3df5a0fd0541ae39f8cc78f93b7
+    m_TableEntryReference:
+      m_KeyId: 34975199232
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 2
   _stackSize: 300
   _weight: 0.1
   _price: 10
   _projectileSprite: {fileID: 0}
   _damageMultiplier: 1
-  _rangeMultiplier: 1
   _forceMultiplier: 1
-  _knockbackMultiplier: 1
   _pierceCount: 0
+  _damageEffects: []
+  references:
+    version: 2
+    RefIds: []

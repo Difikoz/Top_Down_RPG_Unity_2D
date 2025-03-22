@@ -15,18 +15,18 @@ MonoBehaviour:
   _id: Sword
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:d7997e414cfa193418955c5789838cc4
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 7615754240
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:0f84dc978b802c34db326691ebcef1fa
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 4130287616
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
@@ -40,7 +40,6 @@ MonoBehaviour:
   _weaponSprite: {fileID: 0}
   _weaponType: 0
   _damageTypes: []
-  _knockback: 2
   _modifiers: []
   _attackEffects: []
   _damageEffects: []

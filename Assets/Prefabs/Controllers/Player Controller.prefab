@@ -2893,6 +2893,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b14788d06e7bc4db98d91cae08693f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _startingFaction: {fileID: 11400000, guid: 722ba0eb4f91e0249af31ac12749cf44, type: 2}
+  _startingInventory: {fileID: 11400000, guid: 60b6b94f66d88bd4f86a700266bacedf, type: 2}
 --- !u!114 &1084297022475096764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,6 +2972,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4525739c2a777f49b664d3a28f314ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _healthRegenerationTickTime: 0.5
+  _staminaRegenerationTickTime: 0.25
+  _healthRegenerationDelayTime: 10
+  _staminaRegenerationDelayTime: 5
 --- !u!95 &2965511893726103176
 Animator:
   serializedVersion: 7

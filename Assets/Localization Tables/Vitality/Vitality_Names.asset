@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Vitality_Names
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: fffa005dc58491d4baa8549c2e5886c3, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: 27f02b6c8f59ef448a637e55e8649e11, type: 2}
+  - {fileID: 11400000, guid: bdffd3255769c3949affbe61a5b4cf07, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

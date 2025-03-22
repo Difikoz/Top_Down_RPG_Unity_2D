@@ -15,31 +15,32 @@ MonoBehaviour:
   _id: Leather Gloves
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:4fcb5e9672922354cab1c386b27eb039
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 3765383168
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:1059b1f3234215445940e4391fb446f0
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5757677568
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: 0}
-  _visualSprite: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 1
   _stackSize: 1
   _weight: 1
   _price: 100
-  _equipmentType: 2
+  _equipmentType: 4
   _modifiers: []
   _effects: []
+  _glovesSprite: {fileID: 0}
   references:
     version: 2
     RefIds: []

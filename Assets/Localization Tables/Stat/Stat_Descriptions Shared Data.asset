@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Stat_Descriptions Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Stat_Descriptions
+  m_TableCollectionNameGuidString: 43b89bb20012497419a10d6a98af7f37
+  m_Entries:
+  - m_Id: 5304692736
+    m_Key: HP MAX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 36170575872
+    m_Key: SP MAX
+    m_Metadata:
+      m_Items: []
+  - m_Id: 39123365888
+    m_Key: HP REGEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 41975492608
+    m_Key: SP REGEN
+    m_Metadata:
+      m_Items: []
+  - m_Id: 44630487040
+    m_Key: ASPD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 48686379008
+    m_Key: MSPD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 51337179136
+    m_Key: EVADE
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53602103296
+    m_Key: RLDSPD
+    m_Metadata:
+      m_Items: []
+  - m_Id: 56034799616
+    m_Key: SLICING RES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 58220032000
+    m_Key: PIERCING RES
+    m_Metadata:
+      m_Items: []
+  - m_Id: 60199743488
+    m_Key: BLUNT RES
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8657956389099667986
+  references:
+    version: 2
+    RefIds:
+    - rid: 8657956389099667986
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1742661267734

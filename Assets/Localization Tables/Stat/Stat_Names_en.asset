@@ -1,0 +1,67 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Stat_Names_en
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 4024a4fb9826ff54e86da1673298a6b9, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 295160459264
+    m_Localized: Blunt Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 275166212096
+    m_Localized: Piercing Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 253146116096
+    m_Localized: Slicing Resistance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 231901966336
+    m_Localized: Reload Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 216370458624
+    m_Localized: Evade Chance
+    m_Metadata:
+      m_Items: []
+  - m_Id: 198410448896
+    m_Localized: Movement Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 182941855744
+    m_Localized: Attack Speed
+    m_Metadata:
+      m_Items: []
+  - m_Id: 163010523136
+    m_Localized: Stamina Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 143846748160
+    m_Localized: Health Regeneration
+    m_Metadata:
+      m_Items: []
+  - m_Id: 29241585664
+    m_Localized: Stamina Points
+    m_Metadata:
+      m_Items: []
+  - m_Id: 11424182272
+    m_Localized: Health Points
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []

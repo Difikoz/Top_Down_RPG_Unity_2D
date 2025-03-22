@@ -15,24 +15,24 @@ MonoBehaviour:
   _id: Leather Pants
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:aac2f0d9737d3c64b987a5921533b84f
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5044645888
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:826f5658991fb364aa9b955a28ac23e2
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 6919499776
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: 0}
-  _visualSprite: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 1
   _stackSize: 1
   _weight: 1
@@ -40,7 +40,9 @@ MonoBehaviour:
   _equipmentType: 3
   _modifiers: []
   _effects: []
-  _secondaryVisualSprite: {fileID: 0}
+  _bodyVisualSprite: {fileID: 0}
+  _upperLegVisualSprite: {fileID: 0}
+  _lowerLegVisualSprite: {fileID: 0}
   references:
     version: 2
     RefIds: []

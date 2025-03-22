@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5be51871efa6c3e4eae1703925c8f5ac, type: 3}
+  m_Name: Chest_Names
+  m_EditorClassIdentifier: 
+  m_SharedTableData: {fileID: 11400000, guid: 1597d0971a5efb74d9344066bc8ccaff, type: 2}
+  m_Tables:
+  - {fileID: 11400000, guid: b67ed5b6a17261c41b748003b30370ff, type: 2}
+  - {fileID: 11400000, guid: 5864f84e3e6267a4e8fc429691f59706, type: 2}
+  m_Extensions: []
+  m_Group: String Table
+  references:
+    version: 2
+    RefIds: []

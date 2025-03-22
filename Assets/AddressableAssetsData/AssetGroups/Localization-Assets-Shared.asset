@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Localization-Assets-Shared
+  m_EditorClassIdentifier: 
+  m_GroupName: Localization-Assets-Shared
+  m_GUID: d4f592ff6bcd75a4da1b2ecd52ecf5fc
+  m_SerializeEntries:
+  - m_GUID: 04b149a16f859ac4b830bdaaefddd6a1
+    m_Address: Assets/Localization Tables/Faction/Faction_Descriptions Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 079f6c9f4c5502f4a94eb726062151a2
+    m_Address: Assets/Localization Tables/Item/Ranged Weapon/Ranged_Weapon_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f84dc978b802c34db326691ebcef1fa
+    m_Address: Assets/Localization Tables/Item/Melee Weapon/Melee_Weapon_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1059b1f3234215445940e4391fb446f0
+    m_Address: Assets/Localization Tables/Item/Equipment/Gloves/Gloves_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1597d0971a5efb74d9344066bc8ccaff
+    m_Address: Assets/Localization Tables/Item/Equipment/Chest/Chest_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4024a4fb9826ff54e86da1673298a6b9
+    m_Address: Assets/Localization Tables/Stat/Stat_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 43b89bb20012497419a10d6a98af7f37
+    m_Address: Assets/Localization Tables/Stat/Stat_Descriptions Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47215dc3742c05143a4a1bb9c4d6ed85
+    m_Address: Assets/Localization Tables/Item/Equipment/Chest/Chest_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4a304c9846585884da00a62bd69de06e
+    m_Address: Assets/Localization Tables/Faction/Factions_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ba1560550fe4b0499bbfae86be05ed6
+    m_Address: Assets/Localization Tables/Item/Consumable/Medkit_Descriptions Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4fcb5e9672922354cab1c386b27eb039
+    m_Address: Assets/Localization Tables/Item/Equipment/Gloves/Gloves_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 51a3bd15a1e8ba54fa45b5a95b2912aa
+    m_Address: Assets/Localization Tables/Item/Equipment/Belt/Belt_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 591fbd545ceff274e8ddcc617629a7f0
+    m_Address: Assets/Localization Tables/Item/Equipment/Belt/Belt_Descriptions Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 688013e7525c6654eba8a697877b5c4f
+    m_Address: Assets/Localization Tables/Item/Ranged Weapon/Ranged_Weapon_Names
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a10fe3f3f15b5d4f9c4d13ce8f3d703
+    m_Address: Assets/Localization Tables/Item/Equipment/Helmet/Helmet_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 76a243f04159e2b48b81f6d5429c1537
+    m_Address: Assets/Localization Tables/Item/Consumable/Food_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 826f5658991fb364aa9b955a28ac23e2
+    m_Address: Assets/Localization Tables/Item/Equipment/Pants/Pants_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 893635f79d8dc7a49852a6f13309687c
+    m_Address: Assets/Localization Tables/Item/Consumable/Drink_Descriptions Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8d73b6249e8dbd94bb1d03303dd6022c
+    m_Address: Assets/Localization Tables/Item/Equipment/Boots/Boots_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95f7b3df5a0fd0541ae39f8cc78f93b7
+    m_Address: Assets/Localization Tables/Item/Ammo/Ammo_Descriptions Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e833d4b6f6aec344874653bfd66eb52
+    m_Address: Assets/Localization Tables/Item/Ammo/Ammo_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8069195f1fd2de4aaba22817aeae679
+    m_Address: Assets/Localization Tables/Item/Equipment/Helmet/Helmet_Descriptions
+      Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aac2f0d9737d3c64b987a5921533b84f
+    m_Address: Assets/Localization Tables/Item/Equipment/Pants/Pants_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4e831a86f43f0042955942a95fa631a
+    m_Address: Assets/Localization Tables/Item/Consumable/Medical_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7997e414cfa193418955c5789838cc4
+    m_Address: Assets/Localization Tables/Item/Melee Weapon/Melee_Weapon_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d93dcc7cb1e559d4d93044295ecd67d7
+    m_Address: Assets/Localization Tables/Item/Equipment/Boots/Boots_Names Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e4083b54047ff414ca3b8b8366135c7d
+    m_Address: Assets/Localization Tables/Item/Consumable/Food_Descriptions Shared
+      Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ef04a8e68c2bd5a40b2d1b86204b84c1
+    m_Address: Assets/Localization Tables/Item/Consumable/Drink_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f0a646708ef102041869232f4fab2d9c
+    m_Address: Assets/Localization Tables/Status Page/Status_Page_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fffa005dc58491d4baa8549c2e5886c3
+    m_Address: Assets/Localization Tables/Vitality/Vitality_Names Shared Data.asset
+    m_ReadOnly: 1
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 1
+  m_Settings: {fileID: 11400000, guid: 06b9ed5ffdb4b95499990711a503c02b, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 3c068a49b3071de4b91e94846d89a1b2, type: 2}
+    - {fileID: 11400000, guid: 0fbe96e5f84339748b611b5cfe6d5a07, type: 2}

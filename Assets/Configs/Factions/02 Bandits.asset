@@ -13,12 +13,30 @@ MonoBehaviour:
   m_Name: 02 Bandits
   m_EditorClassIdentifier: 
   _id: Bandits
-  _displayName: Bandits
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4a304c9846585884da00a62bd69de06e
+    m_TableEntryReference:
+      m_KeyId: 38141898752
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:04b149a16f859ac4b830bdaaefddd6a1
+    m_TableEntryReference:
+      m_KeyId: 5862535168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
   _relationships:
   - _faction: {fileID: 11400000, guid: 722ba0eb4f91e0249af31ac12749cf44, type: 2}
     _state: 0
   - _faction: {fileID: 11400000}
     _state: 1
+  references:
+    version: 2
+    RefIds: []

@@ -13,12 +13,30 @@ MonoBehaviour:
   m_Name: 01 Loners
   m_EditorClassIdentifier: 
   _id: Loners
-  _displayName: Loners
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:4a304c9846585884da00a62bd69de06e
+    m_TableEntryReference:
+      m_KeyId: 6999191552
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:04b149a16f859ac4b830bdaaefddd6a1
+    m_TableEntryReference:
+      m_KeyId: 3387895808
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
   _relationships:
   - _faction: {fileID: 11400000}
     _state: 1
   - _faction: {fileID: 11400000, guid: e31193ee7d63110468095536910ae5a8, type: 2}
     _state: 0
+  references:
+    version: 2
+    RefIds: []

@@ -15,24 +15,24 @@ MonoBehaviour:
   _id: Juice
   _displayName:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:ef04a8e68c2bd5a40b2d1b86204b84c1
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 5220806656
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _description:
     m_TableReference:
-      m_TableCollectionName: 
+      m_TableCollectionName: GUID:893635f79d8dc7a49852a6f13309687c
     m_TableEntryReference:
-      m_KeyId: 0
+      m_KeyId: 6525235200
       m_Key: 
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
   _icon: {fileID: 0}
-  _visualSprite: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 3
   _stackSize: 1
   _weight: 1

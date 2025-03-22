@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69b5ca747994ff944b05a39b345ad301, type: 3}
+  m_Name: Leather Helmet
+  m_EditorClassIdentifier: 
+  _id: Leather Helmet
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:6a10fe3f3f15b5d4f9c4d13ce8f3d703
+    m_TableEntryReference:
+      m_KeyId: 6206468096
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:a8069195f1fd2de4aaba22817aeae679
+    m_TableEntryReference:
+      m_KeyId: 6386823168
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: 0}
+  _lootSprite: {fileID: 0}
+  _itemType: 1
+  _stackSize: 1
+  _weight: 1
+  _price: 100
+  _equipmentType: 0
+  _modifiers: []
+  _effects: []
+  _helmetSprite: {fileID: 0}
+  references:
+    version: 2
+    RefIds: []

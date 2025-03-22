@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: Ammo_Names_ru
+  m_EditorClassIdentifier: 
+  m_LocaleId:
+    m_Code: ru
+  m_SharedData: {fileID: 11400000, guid: 9e833d4b6f6aec344874653bfd66eb52, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 169868210176
+    m_Localized: 9x18 J
+    m_Metadata:
+      m_Items: []
+  - m_Id: 174557442048
+    m_Localized: 9x18 N
+    m_Metadata:
+      m_Items: []
+  - m_Id: 177174687744
+    m_Localized: 9x18 P
+    m_Metadata:
+      m_Items: []
+  - m_Id: 179624161280
+    m_Localized: 9x18 S
+    m_Metadata:
+      m_Items: []
+  - m_Id: 265397678080
+    m_Localized: "\u0421\u0442\u0430\u043B\u044C\u043D\u0430\u044F \u0421\u0442\u0440\u0435\u043B\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 263854174208
+    m_Localized: "\u041C\u0435\u0434\u043D\u0430\u044F \u0421\u0442\u0440\u0435\u043B\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 261878657024
+    m_Localized: "\u041A\u0430\u043C\u0435\u043D\u043D\u0430\u044F \u0421\u0442\u0440\u0435\u043B\u0430"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 256572862464
+    m_Localized: "\u0414\u0435\u0440\u0435\u0432\u044F\u043D\u043D\u0430\u044F \u0421\u0442\u0440\u0435\u043B\u0430"
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
