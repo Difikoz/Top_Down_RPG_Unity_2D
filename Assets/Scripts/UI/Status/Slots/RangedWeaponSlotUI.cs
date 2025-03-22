@@ -10,14 +10,14 @@ namespace WinterUniverse
         [SerializeField] private Image _iconImage;
         [SerializeField] private Sprite _emptySprite;
 
-        private RangedWeaponItemConfig _weapon;
+        private RangedWeaponItemConfig _config;
 
-        public void Initialize(RangedWeaponItemConfig weapon)
+        public void Initialize(RangedWeaponItemConfig config)
         {
-            _weapon = weapon;
-            if (_weapon != null)
+            _config = config;
+            if (_config != null)
             {
-                _iconImage.sprite = _weapon.Icon;
+                _iconImage.sprite = _config.Icon;
             }
             else
             {
@@ -32,12 +32,12 @@ namespace WinterUniverse
 
         public void OnSelect(BaseEventData eventData)
         {
-            GameManager.StaticInstance.UIManager.StatusBar.EquipmentPage.ShowFullInformation(_weapon);
+            GameManager.StaticInstance.UIManager.StatusBar.EquipmentPage.ShowFullInformation(_config);
         }
 
         public void OnPointerClick(PointerEventData eventData)
         {
-            if (_weapon == null)
+            if (_config == null)
             {
                 return;
             }
@@ -46,7 +46,7 @@ namespace WinterUniverse
 
         public void OnSubmit(BaseEventData eventData)
         {
-            if (_weapon == null)
+            if (_config == null)
             {
                 return;
             }

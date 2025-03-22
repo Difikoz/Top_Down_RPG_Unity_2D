@@ -44,6 +44,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Pawn
+    uniqueID: 521366777
+    locked: 0
   - name: Roof
     uniqueID: 3227230629
     locked: 0

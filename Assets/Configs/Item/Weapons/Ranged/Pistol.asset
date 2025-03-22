@@ -13,17 +13,37 @@ MonoBehaviour:
   m_Name: Pistol
   m_EditorClassIdentifier: 
   _id: Pistol
-  _displayName: Pistol
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 0
   _stackSize: 1
   _weight: 1
   _price: 1000
+  _weaponSprite: {fileID: 0}
   _weaponType: 1
   _damageTypes: []
   _knockback: 1
+  _modifiers: []
+  _attackEffects: []
+  _shootPointOffset: {x: 1.75, y: 0.25, z: 0}
   _fireRate: 300
   _range: 10
   _force: 25
@@ -37,3 +57,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 34263df29bfc807458ff7ca305f0c8dc, type: 2}
   - {fileID: 11400000, guid: 60b786b89529eaa4d9fba9dec9874de0, type: 2}
   - {fileID: 11400000, guid: 6d08f5a4471de424fa7e8a2d01a8f4a9, type: 2}
+  references:
+    version: 2
+    RefIds: []

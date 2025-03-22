@@ -13,17 +13,37 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   _id: Bow
-  _displayName: Bow
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 0
   _stackSize: 1
   _weight: 1
   _price: 500
+  _weaponSprite: {fileID: 0}
   _weaponType: 1
   _damageTypes: []
   _knockback: 1
+  _modifiers: []
+  _attackEffects: []
+  _shootPointOffset: {x: 1.75, y: 0.25, z: 0}
   _fireRate: 300
   _range: 10
   _force: 25
@@ -37,3 +57,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 9c917b37c7d16ec44bbbb514b29a5d4a, type: 2}
   - {fileID: 11400000, guid: 96da13a00e567114da8571b56adc4f3d, type: 2}
   - {fileID: 11400000, guid: b51a336fdfb09d14f84141510df2c776, type: 2}
+  references:
+    version: 2
+    RefIds: []

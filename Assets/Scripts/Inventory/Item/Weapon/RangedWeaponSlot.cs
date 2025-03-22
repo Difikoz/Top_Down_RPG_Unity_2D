@@ -5,6 +5,7 @@ namespace WinterUniverse
 {
     public class RangedWeaponSlot : MonoBehaviour
     {
+        [SerializeField] private SpriteRenderer _spriteRenderer;
         [SerializeField] private Transform _shootPoint;
 
         private PawnController _pawn;
@@ -20,6 +21,7 @@ namespace WinterUniverse
         public void Initialize()
         {
             _pawn = GetComponentInParent<PawnController>();
+            ChangeConfig(null);
         }
 
         public void ChangeConfig(RangedWeaponItemConfig config)
@@ -32,6 +34,12 @@ namespace WinterUniverse
             if (_config != null)
             {
                 _pawn.Status.StatHolder.AddStatModifiers(_config.Modifiers);
+                _spriteRenderer.sprite = _config.WeaponSprite;
+                _shootPoint.localPosition = _config.ShootPointOffset;
+            }
+            else
+            {
+                _spriteRenderer.sprite = null;
             }
         }
 

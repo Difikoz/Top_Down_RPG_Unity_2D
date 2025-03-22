@@ -1,5 +1,4 @@
 using System;
-using UnityEngine;
 
 namespace WinterUniverse
 {
@@ -9,13 +8,23 @@ namespace WinterUniverse
 
         private MeleeWeaponSlot _meleeWeaponSlot;
         private RangedWeaponSlot _rangedWeaponSlot;
-        private ArmorSlot _armorSlot;
+        private HelmetEquipmentSlot _helmetSlot;
+        private ChestEquipmentSlot _chestSlot;
+        private GlovesEquipmentSlot _glovesSlot;
+        private PantsEquipmentSlot _pantsSlot;
+        private BootsEquipmentSlot _bootsSlot;
+        private BeltEquipmentSlot _backpackSlot;
         private AmmoSlot _ammoSlot;
         private WeaponType _currentWeaponType;
 
         public MeleeWeaponSlot MeleeWeaponSlot => _meleeWeaponSlot;
         public RangedWeaponSlot RangedWeaponSlot => _rangedWeaponSlot;
-        public ArmorSlot ArmorSlot => _armorSlot;
+        public HelmetEquipmentSlot HelmetSlot => _helmetSlot;
+        public ChestEquipmentSlot ChestSlot => _chestSlot;
+        public GlovesEquipmentSlot GlovesSlot => _glovesSlot;
+        public PantsEquipmentSlot PantsSlot => _pantsSlot;
+        public BootsEquipmentSlot BootsSlot => _bootsSlot;
+        public BeltEquipmentSlot BackpackSlot => _backpackSlot;
         public AmmoSlot AmmoSlot => _ammoSlot;
         public WeaponType CurrentWeaponType => _currentWeaponType;
 
@@ -24,11 +33,21 @@ namespace WinterUniverse
             base.Initialize();
             _meleeWeaponSlot = GetComponentInChildren<MeleeWeaponSlot>();
             _rangedWeaponSlot = GetComponentInChildren<RangedWeaponSlot>();
-            _armorSlot = GetComponentInChildren<ArmorSlot>();
+            _helmetSlot = GetComponentInChildren<HelmetEquipmentSlot>();
+            _chestSlot = GetComponentInChildren<ChestEquipmentSlot>();
+            _glovesSlot = GetComponentInChildren<GlovesEquipmentSlot>();
+            _pantsSlot = GetComponentInChildren<PantsEquipmentSlot>();
+            _bootsSlot = GetComponentInChildren<BootsEquipmentSlot>();
+            _backpackSlot = GetComponentInChildren<BeltEquipmentSlot>();
             _ammoSlot = GetComponentInChildren<AmmoSlot>();
             _meleeWeaponSlot.Initialize();
             _rangedWeaponSlot.Initialize();
-            _armorSlot.Initialize();
+            _helmetSlot.Initialize();
+            _chestSlot.Initialize();
+            _glovesSlot.Initialize();
+            _pantsSlot.Initialize();
+            _bootsSlot.Initialize();
+            _backpackSlot.Initialize();
             _ammoSlot.Initialize();
             ToggleWeaponSlot(WeaponType.Melee);
         }
@@ -78,21 +97,99 @@ namespace WinterUniverse
             EquipAmmo(config.UsingAmmo[0]);
         }
 
-        public void EquipArmor(ArmorItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        public void EquipHelmet(HelmetEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
         {
             if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
             {
                 return;
             }
-            if (_armorSlot.Config != null && addOldToInventory)
-            {
-                _pawn.Inventory.AddItem(_armorSlot.Config);
-            }
+            UnequipHelmet(addOldToInventory);
             if (removeNewFromInventory)
             {
                 _pawn.Inventory.RemoveItem(config);
             }
-            _armorSlot.ChangeConfig(config);
+            _helmetSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_helmetSlot.Config.Modifiers);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void EquipChest(ChestEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
+            UnequipChest(addOldToInventory);
+            if (removeNewFromInventory)
+            {
+                _pawn.Inventory.RemoveItem(config);
+            }
+            _chestSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_chestSlot.Config.Modifiers);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void EquipGloves(GlovesEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
+            UnequipGloves(addOldToInventory);
+            if (removeNewFromInventory)
+            {
+                _pawn.Inventory.RemoveItem(config);
+            }
+            _glovesSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_glovesSlot.Config.Modifiers);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void EquipPants(PantsEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
+            UnequipPants(addOldToInventory);
+            if (removeNewFromInventory)
+            {
+                _pawn.Inventory.RemoveItem(config);
+            }
+            _pantsSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_pantsSlot.Config.Modifiers);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void EquipBoots(BootsEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
+            UnequipBoots(addOldToInventory);
+            if (removeNewFromInventory)
+            {
+                _pawn.Inventory.RemoveItem(config);
+            }
+            _bootsSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_bootsSlot.Config.Modifiers);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void EquipBackpack(BeltEquipmentItemConfig config, bool removeNewFromInventory = true, bool addOldToInventory = true)
+        {
+            if (_pawn.Status.StateHolder.CompareStateValue("Is Perfoming Action", true))
+            {
+                return;
+            }
+            UnequipBackpack(addOldToInventory);
+            if (removeNewFromInventory)
+            {
+                _pawn.Inventory.RemoveItem(config);
+            }
+            _backpackSlot.ChangeConfig(config);
+            _pawn.Status.StatHolder.AddStatModifiers(_backpackSlot.Config.Modifiers);
             OnEquipmentChanged?.Invoke();
         }
 
@@ -153,17 +250,93 @@ namespace WinterUniverse
             UnequipAmmo();
         }
 
-        public void UnequipArmor(bool addOldToInventory = true)
+        public void UnequipHelmet(bool addOldToInventory = true)
         {
-            if (_armorSlot.Config == null)
+            if (_helmetSlot.Config == null)
             {
                 return;
             }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_helmetSlot.Config.Modifiers);
             if (addOldToInventory)
             {
-                _pawn.Inventory.AddItem(_armorSlot.Config);
+                _pawn.Inventory.AddItem(_helmetSlot.Config);
             }
-            _armorSlot.ChangeConfig(null);
+            _helmetSlot.ChangeConfig(null);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void UnequipChest(bool addOldToInventory = true)
+        {
+            if (_chestSlot.Config == null)
+            {
+                return;
+            }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_chestSlot.Config.Modifiers);
+            if (addOldToInventory)
+            {
+                _pawn.Inventory.AddItem(_chestSlot.Config);
+            }
+            _chestSlot.ChangeConfig(null);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void UnequipGloves(bool addOldToInventory = true)
+        {
+            if (_glovesSlot.Config == null)
+            {
+                return;
+            }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_glovesSlot.Config.Modifiers);
+            if (addOldToInventory)
+            {
+                _pawn.Inventory.AddItem(_glovesSlot.Config);
+            }
+            _glovesSlot.ChangeConfig(null);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void UnequipPants(bool addOldToInventory = true)
+        {
+            if (_pantsSlot.Config == null)
+            {
+                return;
+            }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_pantsSlot.Config.Modifiers);
+            if (addOldToInventory)
+            {
+                _pawn.Inventory.AddItem(_pantsSlot.Config);
+            }
+            _pantsSlot.ChangeConfig(null);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void UnequipBoots(bool addOldToInventory = true)
+        {
+            if (_bootsSlot.Config == null)
+            {
+                return;
+            }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_bootsSlot.Config.Modifiers);
+            if (addOldToInventory)
+            {
+                _pawn.Inventory.AddItem(_bootsSlot.Config);
+            }
+            _bootsSlot.ChangeConfig(null);
+            OnEquipmentChanged?.Invoke();
+        }
+
+        public void UnequipBackpack(bool addOldToInventory = true)
+        {
+            if (_backpackSlot.Config == null)
+            {
+                return;
+            }
+            _pawn.Status.StatHolder.RemoveStatModifiers(_backpackSlot.Config.Modifiers);
+            if (addOldToInventory)
+            {
+                _pawn.Inventory.AddItem(_backpackSlot.Config);
+            }
+            _backpackSlot.ChangeConfig(null);
             OnEquipmentChanged?.Invoke();
         }
 

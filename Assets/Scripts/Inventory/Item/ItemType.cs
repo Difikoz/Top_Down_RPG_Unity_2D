@@ -3,7 +3,7 @@ namespace WinterUniverse
     public enum ItemType
     {
         Weapon,
-        Armor,
+        Equipment,
         Ammo,
         Consumable,
         Resource,

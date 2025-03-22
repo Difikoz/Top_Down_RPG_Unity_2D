@@ -13,17 +13,42 @@ MonoBehaviour:
   m_Name: Sword
   m_EditorClassIdentifier: 
   _id: Sword
-  _displayName: Sword
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
   _icon: {fileID: 0}
+  _lootSprite: {fileID: 0}
   _itemType: 0
   _stackSize: 1
   _weight: 1
   _price: 1000
+  _weaponSprite: {fileID: 0}
   _weaponType: 0
   _damageTypes: []
   _knockback: 2
+  _modifiers: []
+  _attackEffects: []
+  _damageEffects: []
+  _colliderSize: {x: 0.25, y: 1.5}
+  _colliderOffset: {x: 0, y: 1}
   _attackRange: 2
   _attackSpeed: 1
   _attackCooldown: 0.5
+  references:
+    version: 2
+    RefIds: []
