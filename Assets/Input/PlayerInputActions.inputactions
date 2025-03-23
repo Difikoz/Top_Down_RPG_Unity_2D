@@ -15,15 +15,6 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Dash",
-                    "type": "Button",
-                    "id": "f1ba0d36-48eb-4cd5-b651-1c94a6531f70",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": "Press",
-                    "initialStateCheck": false
-                },
-                {
                     "name": "Interact",
                     "type": "Button",
                     "id": "852140f2-7766-474d-8707-702459ba45f3",
@@ -51,7 +42,43 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ReloadRangedWeapon",
+                    "name": "PickMeleeWeapon",
+                    "type": "Button",
+                    "id": "0ad5f6ed-bb1e-4a7c-a1d9-996104cdef9a",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PickRangedWeapon",
+                    "type": "Button",
+                    "id": "c66f2b22-b86f-439d-bfcb-2f5241e622bd",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PickElse",
+                    "type": "Button",
+                    "id": "7287183c-7f13-40ae-8432-473473b86a47",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "PickElse1",
+                    "type": "Button",
+                    "id": "98e4c5f4-683d-4533-9d1c-4645df6c5aad",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "Press",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ReloadWeapon",
                     "type": "Button",
                     "id": "2cc141d9-dda0-4f99-b26e-181148d5f5b8",
                     "expectedControlType": "",
@@ -145,18 +172,51 @@
                     "interactions": "",
                     "processors": "",
                     "groups": ";Keyboard&Mouse",
-                    "action": "ReloadRangedWeapon",
+                    "action": "ReloadWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "eb40bb66-4559-4dfa-9a2f-820438abb426",
-                    "path": "<Keyboard>/space",
+                    "id": "2a5d26cd-b7c2-4818-b7e1-a03af62b6472",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
-                    "groups": "Keyboard&Mouse",
-                    "action": "Dash",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "PickMeleeWeapon",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "39dbba1d-a705-4e8c-9a9d-e0888f3a7b36",
+                    "path": "<Keyboard>/3",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "PickElse",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4ec4f2f6-93d2-443b-be18-d1646bf163ee",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "PickElse1",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "1943920b-4cd5-49fa-969b-d0c8d9646712",
+                    "path": "<Keyboard>/2",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Keyboard&Mouse",
+                    "action": "PickRangedWeapon",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },

@@ -10,14 +10,12 @@ namespace WinterUniverse
         [SerializeField] private List<StatusPageUI> _pages = new();
 
         private int _currentPageIndex;
-        private EquipmentStatusPageUI _equipmentPage;
         private InventoryStatusPageUI _inventoryPage;
         private StatsStatusPageUI _statsPage;
         private JournalStatusPageUI _journalPage;
         private FactionsStatusPageUI _factionsPage;
         private MapStatusPageUI _mapPage;
 
-        public EquipmentStatusPageUI EquipmentPage => _equipmentPage;
         public InventoryStatusPageUI InventoryPage => _inventoryPage;
         public StatsStatusPageUI StatsPage => _statsPage;
         public JournalStatusPageUI JournalPage => _journalPage;
@@ -27,7 +25,6 @@ namespace WinterUniverse
         public override void Initialize()
         {
             base.Initialize();
-            _equipmentPage = GetComponentInChildren<EquipmentStatusPageUI>();
             _inventoryPage = GetComponentInChildren<InventoryStatusPageUI>();
             _statsPage = GetComponentInChildren<StatsStatusPageUI>();
             _journalPage = GetComponentInChildren<JournalStatusPageUI>();

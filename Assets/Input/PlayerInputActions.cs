@@ -101,15 +101,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": true
                 },
                 {
-                    ""name"": ""Dash"",
-                    ""type"": ""Button"",
-                    ""id"": ""f1ba0d36-48eb-4cd5-b651-1c94a6531f70"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": ""Press"",
-                    ""initialStateCheck"": false
-                },
-                {
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""852140f2-7766-474d-8707-702459ba45f3"",
@@ -137,7 +128,43 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ReloadRangedWeapon"",
+                    ""name"": ""PickMeleeWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""0ad5f6ed-bb1e-4a7c-a1d9-996104cdef9a"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PickRangedWeapon"",
+                    ""type"": ""Button"",
+                    ""id"": ""c66f2b22-b86f-439d-bfcb-2f5241e622bd"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PickElse"",
+                    ""type"": ""Button"",
+                    ""id"": ""7287183c-7f13-40ae-8432-473473b86a47"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""PickElse1"",
+                    ""type"": ""Button"",
+                    ""id"": ""98e4c5f4-683d-4533-9d1c-4645df6c5aad"",
+                    ""expectedControlType"": """",
+                    ""processors"": """",
+                    ""interactions"": ""Press"",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ReloadWeapon"",
                     ""type"": ""Button"",
                     ""id"": ""2cc141d9-dda0-4f99-b26e-181148d5f5b8"",
                     ""expectedControlType"": """",
@@ -231,18 +258,51 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": "";Keyboard&Mouse"",
-                    ""action"": ""ReloadRangedWeapon"",
+                    ""action"": ""ReloadWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""eb40bb66-4559-4dfa-9a2f-820438abb426"",
-                    ""path"": ""<Keyboard>/space"",
+                    ""id"": ""2a5d26cd-b7c2-4818-b7e1-a03af62b6472"",
+                    ""path"": ""<Keyboard>/1"",
                     ""interactions"": """",
                     ""processors"": """",
-                    ""groups"": ""Keyboard&Mouse"",
-                    ""action"": ""Dash"",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""PickMeleeWeapon"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""39dbba1d-a705-4e8c-9a9d-e0888f3a7b36"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""PickElse"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4ec4f2f6-93d2-443b-be18-d1646bf163ee"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""PickElse1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""1943920b-4cd5-49fa-969b-d0c8d9646712"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";Keyboard&Mouse"",
+                    ""action"": ""PickRangedWeapon"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -677,11 +737,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         // Pawn
         m_Pawn = asset.FindActionMap("Pawn", throwIfNotFound: true);
         m_Pawn_Move = m_Pawn.FindAction("Move", throwIfNotFound: true);
-        m_Pawn_Dash = m_Pawn.FindAction("Dash", throwIfNotFound: true);
         m_Pawn_Interact = m_Pawn.FindAction("Interact", throwIfNotFound: true);
         m_Pawn_PrimaryAction = m_Pawn.FindAction("PrimaryAction", throwIfNotFound: true);
         m_Pawn_SecondaryAction = m_Pawn.FindAction("SecondaryAction", throwIfNotFound: true);
-        m_Pawn_ReloadRangedWeapon = m_Pawn.FindAction("ReloadRangedWeapon", throwIfNotFound: true);
+        m_Pawn_PickMeleeWeapon = m_Pawn.FindAction("PickMeleeWeapon", throwIfNotFound: true);
+        m_Pawn_PickRangedWeapon = m_Pawn.FindAction("PickRangedWeapon", throwIfNotFound: true);
+        m_Pawn_PickElse = m_Pawn.FindAction("PickElse", throwIfNotFound: true);
+        m_Pawn_PickElse1 = m_Pawn.FindAction("PickElse1", throwIfNotFound: true);
+        m_Pawn_ReloadWeapon = m_Pawn.FindAction("ReloadWeapon", throwIfNotFound: true);
         // Camera
         m_Camera = asset.FindActionMap("Camera", throwIfNotFound: true);
         m_Camera_Cursor = m_Camera.FindAction("Cursor", throwIfNotFound: true);
@@ -783,11 +846,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Pawn;
     private List<IPawnActions> m_PawnActionsCallbackInterfaces = new List<IPawnActions>();
     private readonly InputAction m_Pawn_Move;
-    private readonly InputAction m_Pawn_Dash;
     private readonly InputAction m_Pawn_Interact;
     private readonly InputAction m_Pawn_PrimaryAction;
     private readonly InputAction m_Pawn_SecondaryAction;
-    private readonly InputAction m_Pawn_ReloadRangedWeapon;
+    private readonly InputAction m_Pawn_PickMeleeWeapon;
+    private readonly InputAction m_Pawn_PickRangedWeapon;
+    private readonly InputAction m_Pawn_PickElse;
+    private readonly InputAction m_Pawn_PickElse1;
+    private readonly InputAction m_Pawn_ReloadWeapon;
     /// <summary>
     /// Provides access to input actions defined in input action map "Pawn".
     /// </summary>
@@ -804,10 +870,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @Move => m_Wrapper.m_Pawn_Move;
         /// <summary>
-        /// Provides access to the underlying input action "Pawn/Dash".
-        /// </summary>
-        public InputAction @Dash => m_Wrapper.m_Pawn_Dash;
-        /// <summary>
         /// Provides access to the underlying input action "Pawn/Interact".
         /// </summary>
         public InputAction @Interact => m_Wrapper.m_Pawn_Interact;
@@ -820,9 +882,25 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// </summary>
         public InputAction @SecondaryAction => m_Wrapper.m_Pawn_SecondaryAction;
         /// <summary>
-        /// Provides access to the underlying input action "Pawn/ReloadRangedWeapon".
+        /// Provides access to the underlying input action "Pawn/PickMeleeWeapon".
         /// </summary>
-        public InputAction @ReloadRangedWeapon => m_Wrapper.m_Pawn_ReloadRangedWeapon;
+        public InputAction @PickMeleeWeapon => m_Wrapper.m_Pawn_PickMeleeWeapon;
+        /// <summary>
+        /// Provides access to the underlying input action "Pawn/PickRangedWeapon".
+        /// </summary>
+        public InputAction @PickRangedWeapon => m_Wrapper.m_Pawn_PickRangedWeapon;
+        /// <summary>
+        /// Provides access to the underlying input action "Pawn/PickElse".
+        /// </summary>
+        public InputAction @PickElse => m_Wrapper.m_Pawn_PickElse;
+        /// <summary>
+        /// Provides access to the underlying input action "Pawn/PickElse1".
+        /// </summary>
+        public InputAction @PickElse1 => m_Wrapper.m_Pawn_PickElse1;
+        /// <summary>
+        /// Provides access to the underlying input action "Pawn/ReloadWeapon".
+        /// </summary>
+        public InputAction @ReloadWeapon => m_Wrapper.m_Pawn_ReloadWeapon;
         /// <summary>
         /// Provides access to the underlying input action map instance.
         /// </summary>
@@ -852,9 +930,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started += instance.OnMove;
             @Move.performed += instance.OnMove;
             @Move.canceled += instance.OnMove;
-            @Dash.started += instance.OnDash;
-            @Dash.performed += instance.OnDash;
-            @Dash.canceled += instance.OnDash;
             @Interact.started += instance.OnInteract;
             @Interact.performed += instance.OnInteract;
             @Interact.canceled += instance.OnInteract;
@@ -864,9 +939,21 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @SecondaryAction.started += instance.OnSecondaryAction;
             @SecondaryAction.performed += instance.OnSecondaryAction;
             @SecondaryAction.canceled += instance.OnSecondaryAction;
-            @ReloadRangedWeapon.started += instance.OnReloadRangedWeapon;
-            @ReloadRangedWeapon.performed += instance.OnReloadRangedWeapon;
-            @ReloadRangedWeapon.canceled += instance.OnReloadRangedWeapon;
+            @PickMeleeWeapon.started += instance.OnPickMeleeWeapon;
+            @PickMeleeWeapon.performed += instance.OnPickMeleeWeapon;
+            @PickMeleeWeapon.canceled += instance.OnPickMeleeWeapon;
+            @PickRangedWeapon.started += instance.OnPickRangedWeapon;
+            @PickRangedWeapon.performed += instance.OnPickRangedWeapon;
+            @PickRangedWeapon.canceled += instance.OnPickRangedWeapon;
+            @PickElse.started += instance.OnPickElse;
+            @PickElse.performed += instance.OnPickElse;
+            @PickElse.canceled += instance.OnPickElse;
+            @PickElse1.started += instance.OnPickElse1;
+            @PickElse1.performed += instance.OnPickElse1;
+            @PickElse1.canceled += instance.OnPickElse1;
+            @ReloadWeapon.started += instance.OnReloadWeapon;
+            @ReloadWeapon.performed += instance.OnReloadWeapon;
+            @ReloadWeapon.canceled += instance.OnReloadWeapon;
         }
 
         /// <summary>
@@ -881,9 +968,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @Move.started -= instance.OnMove;
             @Move.performed -= instance.OnMove;
             @Move.canceled -= instance.OnMove;
-            @Dash.started -= instance.OnDash;
-            @Dash.performed -= instance.OnDash;
-            @Dash.canceled -= instance.OnDash;
             @Interact.started -= instance.OnInteract;
             @Interact.performed -= instance.OnInteract;
             @Interact.canceled -= instance.OnInteract;
@@ -893,9 +977,21 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @SecondaryAction.started -= instance.OnSecondaryAction;
             @SecondaryAction.performed -= instance.OnSecondaryAction;
             @SecondaryAction.canceled -= instance.OnSecondaryAction;
-            @ReloadRangedWeapon.started -= instance.OnReloadRangedWeapon;
-            @ReloadRangedWeapon.performed -= instance.OnReloadRangedWeapon;
-            @ReloadRangedWeapon.canceled -= instance.OnReloadRangedWeapon;
+            @PickMeleeWeapon.started -= instance.OnPickMeleeWeapon;
+            @PickMeleeWeapon.performed -= instance.OnPickMeleeWeapon;
+            @PickMeleeWeapon.canceled -= instance.OnPickMeleeWeapon;
+            @PickRangedWeapon.started -= instance.OnPickRangedWeapon;
+            @PickRangedWeapon.performed -= instance.OnPickRangedWeapon;
+            @PickRangedWeapon.canceled -= instance.OnPickRangedWeapon;
+            @PickElse.started -= instance.OnPickElse;
+            @PickElse.performed -= instance.OnPickElse;
+            @PickElse.canceled -= instance.OnPickElse;
+            @PickElse1.started -= instance.OnPickElse1;
+            @PickElse1.performed -= instance.OnPickElse1;
+            @PickElse1.canceled -= instance.OnPickElse1;
+            @ReloadWeapon.started -= instance.OnReloadWeapon;
+            @ReloadWeapon.performed -= instance.OnReloadWeapon;
+            @ReloadWeapon.canceled -= instance.OnReloadWeapon;
         }
 
         /// <summary>
@@ -1281,13 +1377,6 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnMove(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "Dash" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
-        /// </summary>
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
-        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnDash(InputAction.CallbackContext context);
-        /// <summary>
         /// Method invoked when associated input action "Interact" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
@@ -1309,12 +1398,40 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
         void OnSecondaryAction(InputAction.CallbackContext context);
         /// <summary>
-        /// Method invoked when associated input action "ReloadRangedWeapon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// Method invoked when associated input action "PickMeleeWeapon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
         /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
         /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
-        void OnReloadRangedWeapon(InputAction.CallbackContext context);
+        void OnPickMeleeWeapon(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PickRangedWeapon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPickRangedWeapon(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PickElse" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPickElse(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "PickElse1" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnPickElse1(InputAction.CallbackContext context);
+        /// <summary>
+        /// Method invoked when associated input action "ReloadWeapon" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnReloadWeapon(InputAction.CallbackContext context);
     }
     /// <summary>
     /// Interface to implement callback methods for all input action callbacks associated with input actions defined by "Camera" which allows adding and removing callbacks.

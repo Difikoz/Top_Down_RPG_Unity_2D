@@ -10,12 +10,12 @@ namespace WinterUniverse
         [SerializeField] private Rigidbody2D _rb;
 
         private PawnController _owner;
-        private WeaponItemConfig _weaponConfig;
+        private RangedWeaponItemConfig _weaponConfig;
         private GameObject _model;
         private WeaponDamageCollider _damageCollider;
         private int _pierceCount;
 
-        public void Initialize(PawnController owner, WeaponItemConfig weapon)
+        public void Initialize(PawnController owner, RangedWeaponItemConfig weapon)
         {
             _damageCollider.Initialize(owner, weapon.DamageTypes, weapon.UsingAmmo.DamageEffects);
             _damageCollider.Enable();

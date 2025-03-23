@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8394e596abf3c24b8e3c202bbf861e9, type: 3}
+  m_Name: Leather Helmet
+  m_EditorClassIdentifier: 
+  _id: Leather Helmet
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a7633707d40cf3648afe8ba72f5e874d
+    m_TableEntryReference:
+      m_KeyId: 10421743616
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:f5a69e0b96178784288e4c406be71fe6
+    m_TableEntryReference:
+      m_KeyId: 5959004160
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: -1661027333519773842, guid: 19724bd052c313148a052b7056198c59, type: 3}
+  _itemType: 2
+  _stackSize: 1
+  _weight: 1
+  _price: 100
+  _visualSprite: {fileID: 8049443131208163468, guid: 7a9b4ddafc8cbe349a9ddd53ce545156, type: 3}
+  _modifiers:
+  - _stat: {fileID: 11400000, guid: 1816a172cb67a354d95a366d5eef9dcf, type: 2}
+    _modifier:
+      _type: 0
+      _value: 10
+  _onDamageEffects:
+  - _chance: 0.1
+    _config: {fileID: 11400000, guid: b6a3ff93074a43e45bd1e1c4939d18dc, type: 2}
+    _value: 1
+    _duration: 5
+  references:
+    version: 2
+    RefIds: []

@@ -22,22 +22,6 @@ MonoBehaviour:
     m_Localized: Leather Helmet
     m_Metadata:
       m_Items: []
-  - m_Id: 22157406208
-    m_Localized: Leather Backpack
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19808595968
-    m_Localized: Leather Boots
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17526894592
-    m_Localized: Leather Gloves
-    m_Metadata:
-      m_Items: []
-  - m_Id: 15211638784
-    m_Localized: Leather Pants
-    m_Metadata:
-      m_Items: []
   - m_Id: 12963491840
     m_Localized: Leather Chest
     m_Metadata:

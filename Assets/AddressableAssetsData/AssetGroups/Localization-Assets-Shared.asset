@@ -15,12 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-Assets-Shared
   m_GUID: d4f592ff6bcd75a4da1b2ecd52ecf5fc
   m_SerializeEntries:
-  - m_GUID: 024d386e68bdf584d9f1ae3f8fdfc656
-    m_Address: Assets/Localization Tables/Item/Consumable/Type/Consumable_Type_Names
-      Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 04b149a16f859ac4b830bdaaefddd6a1
     m_Address: Assets/Localization Tables/Faction/Faction_Descriptions Shared Data.asset
     m_ReadOnly: 1
@@ -42,20 +36,8 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 26a85f0279e13a34695817f39b793b62
-    m_Address: Assets/Localization Tables/Item/Equipment/Type/Equipment_Type_Names
-      Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4024a4fb9826ff54e86da1673298a6b9
     m_Address: Assets/Localization Tables/Stat/Stat_Names Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 41deafa3c7183624a82f0ac3ac9b79fe
-    m_Address: Assets/Localization Tables/Item/Consumable/Type/Consumable_Type_Descriptions
-      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -69,21 +51,9 @@ MonoBehaviour:
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4d8499b94ced58d4a9f109d0bef9dec2
-    m_Address: Assets/Localization Tables/Item/Weapon/Type/Weapon_Type_Descriptions
-      Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4fc710a81ff200d498757d8529c4da7b
     m_Address: Assets/Localization Tables/Item/Weapon/Weapon_Descriptions Shared
       Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7716e664c09e85f4f9a42c41193ebcf2
-    m_Address: Assets/Localization Tables/Item/Equipment/Type/Equipment_Type_Descriptions
-      Shared Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
@@ -110,12 +80,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: f0a646708ef102041869232f4fab2d9c
     m_Address: Assets/Localization Tables/Status Page/Status_Page_Names Shared Data.asset
-    m_ReadOnly: 1
-    m_SerializedLabels: []
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: f3d55cd96df12094ba497b0c640f1c4a
-    m_Address: Assets/Localization Tables/Item/Weapon/Type/Weapon_Type_Names Shared
-      Data.asset
     m_ReadOnly: 1
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

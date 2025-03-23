@@ -31,14 +31,22 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _icon: {fileID: 0}
+  _icon: {fileID: 5843471921508058758, guid: e8396c96754813c4d86fc55f88945065, type: 3}
   _model: {fileID: 0}
   _itemType: 3
   _stackSize: 10
   _weight: 0.5
   _price: 100
   _consumableType: {fileID: 11400000, guid: 9755381d3705a3a40b2e990fbea047bd, type: 2}
-  _effects: []
+  _effects:
+  - _chance: 0
+    _config: {fileID: 11400000, guid: 5233c5d09d8e2184f86708ab648bd735, type: 2}
+    _value: 5
+    _duration: 5
+  - _chance: 0
+    _config: {fileID: 11400000, guid: 9320cc358673ad548b31437c50f383ce, type: 2}
+    _value: 5
+    _duration: 5
   references:
     version: 2
     RefIds: []

@@ -10,7 +10,7 @@ namespace WinterUniverse
         [SerializeField] private List<StateCreatorConfig> _stateCreators = new();
         [SerializeField] private List<FactionConfig> _factions = new();
         [SerializeField] private List<WeaponItemConfig> _weapons = new();
-        [SerializeField] private List<EquipmentItemConfig> _equipments = new();
+        [SerializeField] private List<ArmorItemConfig> _equipments = new();
         [SerializeField] private List<AmmoItemConfig> _ammo = new();
         [SerializeField] private List<ConsumableItemConfig> _consumables = new();
         [SerializeField] private List<ResourceItemConfig> _resources = new();
@@ -30,7 +30,7 @@ namespace WinterUniverse
             {
                 _items.Add(config);
             }
-            foreach (EquipmentItemConfig config in _equipments)
+            foreach (ArmorItemConfig config in _equipments)
             {
                 _items.Add(config);
             }
@@ -96,9 +96,9 @@ namespace WinterUniverse
             return null;
         }
 
-        public EquipmentItemConfig GetEquipment(string id)
+        public ArmorItemConfig GetEquipment(string id)
         {
-            foreach (EquipmentItemConfig config in _equipments)
+            foreach (ArmorItemConfig config in _equipments)
             {
                 if (config.ID == id)
                 {

@@ -31,15 +31,18 @@ MonoBehaviour:
     m_FallbackState: 0
     m_WaitForCompletion: 0
     m_LocalVariables: []
-  _icon: {fileID: 0}
-  _model: {fileID: 0}
-  _itemType: 2
+  _icon: {fileID: -2504675878383478151, guid: 20c7b64f31afc054da9321120b7b4d02, type: 3}
+  _itemType: 4
   _stackSize: 300
   _weight: 0.1
   _price: 10
   _ammoPrefab: {fileID: 4988136788833552870, guid: b7d1053b7e7f72c49a27b316cf6b6d2d, type: 3}
   _pierceCount: 0
-  _damageEffects: []
+  _damageEffects:
+  - _chance: 0.2
+    _config: {fileID: 11400000, guid: d231956a9b289244ea3c4dd80c4c6021, type: 2}
+    _value: 1
+    _duration: 5
   references:
     version: 2
     RefIds: []

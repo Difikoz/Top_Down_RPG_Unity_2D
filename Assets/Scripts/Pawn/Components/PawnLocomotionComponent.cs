@@ -44,7 +44,7 @@ namespace WinterUniverse
             {
                 _moveVelocity = Vector2.MoveTowards(_moveVelocity, Vector2.zero, 4f * Time.fixedDeltaTime);
             }
-            _pawn.Animator.SetFloat("Move Direction", _pawn.Input.IsFacingRight ? _moveVelocity.x : -_moveVelocity.x);
+            _pawn.Animator.SetFloat("Velocity", _rb.linearVelocity.magnitude);
         }
 
         private void OnStatsChanged()

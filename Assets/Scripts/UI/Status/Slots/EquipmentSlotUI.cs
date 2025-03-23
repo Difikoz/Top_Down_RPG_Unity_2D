@@ -6,17 +6,16 @@ namespace WinterUniverse
 {
     public class EquipmentSlotUI : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerClickHandler, ISelectHandler, IDeselectHandler, ISubmitHandler
     {
+        [SerializeField] private ItemType _type;
         [SerializeField] private Button _thisButton;
         [SerializeField] private Image _iconImage;
         [SerializeField] private Image _deselectedFrame;
         [SerializeField] private Image _selectedFrame;
-        [SerializeField] private EquipmentTypeConfig _type;
         [SerializeField] private Sprite _emptySprite;
 
-        private EquipmentItemConfig _config;
-        public EquipmentTypeConfig Type => _type;
+        private ItemConfig _config;
 
-        public void Initialize(EquipmentItemConfig config)
+        public void Initialize(ItemConfig config)
         {
             _config = config;
             if (_config != null)
@@ -43,7 +42,7 @@ namespace WinterUniverse
         {
             _deselectedFrame.gameObject.SetActive(false);
             _selectedFrame.gameObject.SetActive(true);
-            GameManager.StaticInstance.UIManager.StatusBar.EquipmentPage.ShowFullInformation(_config);
+            GameManager.StaticInstance.UIManager.StatusBar.InventoryPage.ShowFullInformation(_config);
         }
 
         public void OnDeselect(BaseEventData eventData)
@@ -58,7 +57,7 @@ namespace WinterUniverse
             {
                 return;
             }
-            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipEquipment(_config.EquipmentType.ID);
+            OnSubmit(eventData);
         }
 
         public void OnSubmit(BaseEventData eventData)
@@ -67,7 +66,21 @@ namespace WinterUniverse
             {
                 return;
             }
-            GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipEquipment(_config.EquipmentType.ID);
+            switch (_type)
+            {
+                case ItemType.MeleeWeapon:
+                    GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipMeleeWeapon();
+                    break;
+                case ItemType.RangedWeapon:
+                    GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipRangedWeapon();
+                    break;
+                case ItemType.Helmet:
+                    GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipHelmet();
+                    break;
+                case ItemType.Chest:
+                    GameManager.StaticInstance.ControllersManager.Player.Equipment.UnequipChest();
+                    break;
+            }
         }
     }
 }

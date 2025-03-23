@@ -115,6 +115,14 @@ namespace WinterUniverse
             {
                 return;
             }
+            if (_pawn.Equipment.HelmetSlot.Config != null)
+            {
+                _effectHolder.ApplyEffects(_pawn.Equipment.HelmetSlot.Config.OnDamageEffects);
+            }
+            if (_pawn.Equipment.ChestSlot.Config != null)
+            {
+                _effectHolder.ApplyEffects(_pawn.Equipment.ChestSlot.Config.OnDamageEffects);
+            }
             float resistance = _statHolder.GetStat(type.ResistanceStat.ID).CurrentValue;
             if (resistance < 100f)
             {
@@ -144,6 +152,11 @@ namespace WinterUniverse
             }
             _healthCurrent = Mathf.Clamp(_healthCurrent + value, 0f, _statHolder.GetStat("HP MAX").CurrentValue);
             OnHealthChanged?.Invoke(_healthCurrent, _statHolder.GetStat("HP MAX").CurrentValue);
+        }
+
+        public bool EnoughStamina(float value)
+        {
+            return value >= 0 && _staminaCurrent >= value;
         }
 
         public void ReduceStaminaCurrent(float value)

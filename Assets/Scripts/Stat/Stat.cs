@@ -8,11 +8,15 @@ namespace WinterUniverse
     {
         private StatConfig _config;
         private float _currentValue;
+        private float _flatValue;
+        private float _multiplierValue;
         private List<float> _flatModifiers;
         private List<float> _multiplierModifiers;
 
         public StatConfig Config => _config;
         public float CurrentValue => _currentValue;
+        public float FlatValue => _flatValue;
+        public float MultiplierValue => _multiplierValue;
         public List<float> FlatModifiers => _flatModifiers;
         public List<float> MultiplierModifiers => _multiplierModifiers;
 
@@ -53,20 +57,19 @@ namespace WinterUniverse
         public void CalculateCurrentValue()
         {
             float value = _config.BaseValue;
+            _flatValue = 0f;
+            _multiplierValue = 0f;
             foreach (float f in _flatModifiers)
             {
-                value += f;
+                _flatValue += f;
             }
-            float multiplierValue = 0f;
             foreach (float f in _multiplierModifiers)
             {
-                multiplierValue += f;
+                _multiplierValue += f;
             }
-            if (multiplierValue != 0f)
+            if (_multiplierValue != 0f)
             {
-                multiplierValue *= value;
-                multiplierValue /= 100f;
-                value += multiplierValue;
+                value += _multiplierValue * value / 100f;
             }
             value = Mathf.Clamp(value, _config.MinValue, _config.MaxValue);
             _currentValue = value;

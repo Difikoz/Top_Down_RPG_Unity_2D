@@ -13,11 +13,30 @@ MonoBehaviour:
   m_Name: Stick
   m_EditorClassIdentifier: 
   _id: Stick
-  _displayName: Stick
-  _description: 
-  _color: {r: 1, g: 1, b: 1, a: 1}
-  _icon: {fileID: 0}
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: 
+    m_TableEntryReference:
+      m_KeyId: 0
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: -436584066867588247, guid: 68564c492ed0c6846a6becf0b94247be, type: 3}
+  _model: {fileID: 0}
   _itemType: 4
   _stackSize: 10
   _weight: 1
   _price: 10
+  references:
+    version: 2
+    RefIds: []

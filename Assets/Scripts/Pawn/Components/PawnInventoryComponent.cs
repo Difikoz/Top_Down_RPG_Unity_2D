@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace WinterUniverse
@@ -150,7 +151,18 @@ namespace WinterUniverse
 
         private void UpdateInventory()
         {
+            SortByName();
             OnInventoryChanged?.Invoke();
+        }
+
+        public void SortByName()
+        {
+            _stacks = _stacks.OrderBy(x => x.Item.DisplayName.GetLocalizedString()).ToList();
+        }
+
+        public void SortByType()
+        {
+            _stacks = _stacks.OrderBy(x => x.Item.ItemType).ToList();
         }
     }
 }

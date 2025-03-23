@@ -26,22 +26,6 @@ MonoBehaviour:
     m_Localized: Any description
     m_Metadata:
       m_Items: []
-  - m_Id: 11600343040
-    m_Localized: Any description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 14716710912
-    m_Localized: Any description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 16964857856
-    m_Localized: Any description
-    m_Metadata:
-      m_Items: []
-  - m_Id: 20760702976
-    m_Localized: Any description
-    m_Metadata:
-      m_Items: []
   references:
     version: 2
     RefIds: []

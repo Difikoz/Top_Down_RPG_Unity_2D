@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed9b85dbce7cb0c4aaadadece236b01c, type: 3}
+  m_Name: Leather Chest
+  m_EditorClassIdentifier: 
+  _id: Leather Chest
+  _displayName:
+    m_TableReference:
+      m_TableCollectionName: GUID:a7633707d40cf3648afe8ba72f5e874d
+    m_TableEntryReference:
+      m_KeyId: 12963491840
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _description:
+    m_TableReference:
+      m_TableCollectionName: GUID:f5a69e0b96178784288e4c406be71fe6
+    m_TableEntryReference:
+      m_KeyId: 8173596672
+      m_Key: 
+    m_FallbackState: 0
+    m_WaitForCompletion: 0
+    m_LocalVariables: []
+  _icon: {fileID: -7552210854056582695, guid: 0eb5902fc8b5db841bbd5943231309f1, type: 3}
+  _itemType: 3
+  _stackSize: 1
+  _weight: 1
+  _price: 100
+  _visualSprite: {fileID: -8792431218924801614, guid: 565a1bb806ee8fc4d8b2d3c83dbeffcf, type: 3}
+  _modifiers:
+  - _stat: {fileID: 11400000, guid: 1816a172cb67a354d95a366d5eef9dcf, type: 2}
+    _modifier:
+      _type: 0
+      _value: 10
+  _onDamageEffects:
+  - _chance: 0.1
+    _config: {fileID: 11400000, guid: 5233c5d09d8e2184f86708ab648bd735, type: 2}
+    _value: 1
+    _duration: 5
+  references:
+    version: 2
+    RefIds: []

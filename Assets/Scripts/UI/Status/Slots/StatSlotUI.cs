@@ -1,31 +1,20 @@
-using TMPro;
-using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
 
 namespace WinterUniverse
 {
-    public class StatSlotUI : MonoBehaviour, IPointerEnterHandler, ISelectHandler
+    public class StatSlotUI : BasicTextSlotUI, ISelectHandler
     {
-        [SerializeField] private Button _thisButton;
-        [SerializeField] private TMP_Text _infoText;
+        private StatConfig _config;
 
-        private Stat _stat;
-
-        public void Initialize(Stat stat)
+        public void Initialize(StatConfig config)
         {
-            _stat = stat;
-            _infoText.text = $"{stat.Config.DisplayName.GetLocalizedString()}: {stat.CurrentValue:0.##}{(stat.Config.IsPercent ? "%" : "")}";
-        }
-
-        public void OnPointerEnter(PointerEventData eventData)
-        {
-            _thisButton.Select();
+            _config = config;
+            SetText(config.DisplayName.GetLocalizedString());
         }
 
         public void OnSelect(BaseEventData eventData)
         {
-            GameManager.StaticInstance.UIManager.StatusBar.StatsPage.ShowFullInformation(_stat.Config);
+            GameManager.StaticInstance.UIManager.StatusBar.StatsPage.ShowFullInformation(_config);
         }
     }
 }

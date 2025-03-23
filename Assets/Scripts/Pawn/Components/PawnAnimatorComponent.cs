@@ -4,6 +4,7 @@ namespace WinterUniverse
 {
     public class PawnAnimatorComponent : PawnComponent
     {
+        [SerializeField] private AnimatorOverrideController _controller;
         [SerializeField] private Transform _bodyPoint;
         [SerializeField] private Transform _headPoint;
 
@@ -31,7 +32,29 @@ namespace WinterUniverse
 
         public void ChangeController(AnimatorOverrideController controller)
         {
-            _animator.runtimeAnimatorController = controller;
+            if (controller != null)
+            {
+                _animator.runtimeAnimatorController = controller;
+            }
+            else
+            {
+                _animator.runtimeAnimatorController = _controller;
+            }
         }
+
+        //public void SpawnRangedProjectiles()
+        //{
+        //    _pawn.Equipment.WeaponSlot.WeaponController.SpawnProjectiles();
+        //}
+
+        //public void EnableMeleeCollider()
+        //{
+        //    _pawn.Equipment.WeaponSlot.WeaponController.EnableDamageCollider();
+        //}
+
+        //public void DisableMeleeCollider()
+        //{
+        //    _pawn.Equipment.WeaponSlot.WeaponController.DisableDamageCollider();
+        //}
     }
 }

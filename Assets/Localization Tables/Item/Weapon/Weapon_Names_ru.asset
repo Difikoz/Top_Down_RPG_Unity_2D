@@ -43,11 +43,11 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 227091099648
-    m_Localized: "\u041B\u0443\u043A"
+    m_Localized: "\u0414\u0435\u0440\u0435\u0432\u044F\u043D\u043D\u044B\u0439 \u041B\u0443\u043A"
     m_Metadata:
       m_Items: []
   - m_Id: 268505657344
-    m_Localized: "\u0410\u0440\u0431\u0430\u043B\u0435\u0442"
+    m_Localized: "\u0414\u0435\u0440\u0435\u0432\u044F\u043D\u043D\u044B\u0439 \u0410\u0440\u0431\u0430\u043B\u0435\u0442"
     m_Metadata:
       m_Items: []
   - m_Id: 293403045888
@@ -55,7 +55,7 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 313573453824
-    m_Localized: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442 \u041A\u0430\u043B\u0430\u0448\u043D\u0438\u043A\u043E\u0432\u0430"
+    m_Localized: AK-47
     m_Metadata:
       m_Items: []
   - m_Id: 335690018816

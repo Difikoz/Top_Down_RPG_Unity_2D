@@ -27,21 +27,21 @@ namespace WinterUniverse
             base.Enable();
             _inputActions.Enable();
             _inputActions.Pawn.Interact.performed += ctx => OnInteractPerfomed();
-            _inputActions.Pawn.PrimaryAction.performed += ctx => _primaryActionInput = true;
-            _inputActions.Pawn.PrimaryAction.canceled += ctx => _primaryActionInput = false;
-            _inputActions.Pawn.SecondaryAction.performed += ctx => _secondaryActionInput = true;
-            _inputActions.Pawn.SecondaryAction.canceled += ctx => _secondaryActionInput = false;
-            _inputActions.Pawn.ReloadRangedWeapon.performed += ctx => OnReloadPerfomed();
+            _inputActions.Pawn.PrimaryAction.performed += ctx => OnPrimaryActionPerfomed();
+            _inputActions.Pawn.PrimaryAction.canceled += ctx => OnPrimaryActionCanceled();
+            _inputActions.Pawn.SecondaryAction.performed += ctx => OnSecondaryActionPerfomed();
+            _inputActions.Pawn.SecondaryAction.canceled += ctx => OnSecondaryActionCanceled();
+            _inputActions.Pawn.ReloadWeapon.performed += ctx => OnReloadPerfomed();
         }
 
         public override void Disable()
         {
             _inputActions.Pawn.Interact.performed -= ctx => OnInteractPerfomed();
-            _inputActions.Pawn.PrimaryAction.performed -= ctx => _primaryActionInput = true;
-            _inputActions.Pawn.PrimaryAction.canceled -= ctx => _primaryActionInput = false;
-            _inputActions.Pawn.SecondaryAction.performed -= ctx => _secondaryActionInput = true;
-            _inputActions.Pawn.SecondaryAction.canceled -= ctx => _secondaryActionInput = false;
-            _inputActions.Pawn.ReloadRangedWeapon.performed -= ctx => OnReloadPerfomed();
+            _inputActions.Pawn.PrimaryAction.performed -= ctx => OnPrimaryActionPerfomed();
+            _inputActions.Pawn.PrimaryAction.canceled -= ctx => OnPrimaryActionCanceled();
+            _inputActions.Pawn.SecondaryAction.performed -= ctx => OnSecondaryActionPerfomed();
+            _inputActions.Pawn.SecondaryAction.canceled -= ctx => OnSecondaryActionCanceled();
+            _inputActions.Pawn.ReloadWeapon.performed -= ctx => OnReloadPerfomed();
             _inputActions.Disable();
             base.Disable();
         }
@@ -55,18 +55,59 @@ namespace WinterUniverse
                 return;
             }
             _input.MoveDirection = _inputActions.Pawn.Move.ReadValue<Vector2>();
-            if (_primaryActionInput)
-            {
-                _equipment.WeaponSlot.PerformAttack();
-            }
             if (_secondaryActionInput)
             {
-                //_equipment.WeaponSlot.PerformAttack();
+                if (_primaryActionInput)
+                {
+                    _equipment.RangedWeaponSlot.PerformFire();
+                }
+            }
+            else if (_primaryActionInput)
+            {
+                _equipment.MeleeWeaponSlot.PerformAttack();
             }
         }
 
         private void OnInteractPerfomed()
         {
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                return;
+            }
+        }
+
+        private void OnPrimaryActionPerfomed()
+        {
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                _primaryActionInput = false;
+                return;
+            }
+            _primaryActionInput = true;
+        }
+
+        private void OnPrimaryActionCanceled()
+        {
+            _primaryActionInput = false;
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                return;
+            }
+        }
+
+        private void OnSecondaryActionPerfomed()
+        {
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                _secondaryActionInput = false;
+                return;
+            }
+            _secondaryActionInput = true;
+        }
+
+        private void OnSecondaryActionCanceled()
+        {
+            _secondaryActionInput = false;
             if (GameManager.StaticInstance.InputMode == InputMode.UI)
             {
                 return;
@@ -79,7 +120,7 @@ namespace WinterUniverse
             {
                 return;
             }
-            _equipment.WeaponSlot.ReloadWeapon();
+            _equipment.RangedWeaponSlot.ReloadWeapon();
         }
     }
 }

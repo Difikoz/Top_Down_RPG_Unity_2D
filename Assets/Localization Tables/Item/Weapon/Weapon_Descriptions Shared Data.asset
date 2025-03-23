@@ -40,23 +40,23 @@ MonoBehaviour:
     m_Metadata:
       m_Items: []
   - m_Id: 257675964416
-    m_Key: Bow
+    m_Key: Wooden Bow
     m_Metadata:
       m_Items: []
   - m_Id: 268946059264
-    m_Key: Crossbow
+    m_Key: Wooden Crossbow
     m_Metadata:
       m_Items: []
   - m_Id: 305625247744
-    m_Key: Pistol
+    m_Key: Pistol Makarov
     m_Metadata:
       m_Items: []
   - m_Id: 320980594688
-    m_Key: Rifle
+    m_Key: AK-47
     m_Metadata:
       m_Items: []
   - m_Id: 337304825856
-    m_Key: Shotgun
+    m_Key: TOZ-34
     m_Metadata:
       m_Items: []
   - m_Id: 351850672128

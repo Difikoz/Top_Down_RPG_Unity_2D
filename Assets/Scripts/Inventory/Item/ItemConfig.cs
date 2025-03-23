@@ -4,13 +4,11 @@ namespace WinterUniverse
 {
     public abstract class ItemConfig : BasicInfoConfig
     {
-        [SerializeField] private GameObject _model;
         [SerializeField] protected ItemType _itemType;
         [SerializeField] protected int _stackSize = 1;
         [SerializeField] protected float _weight = 1f;
         [SerializeField] protected int _price = 100;
 
-        public GameObject Model => _model;
         public ItemType ItemType => _itemType;
         public int StackSize => _stackSize;
         public float Weight => _weight;
@@ -20,21 +18,28 @@ namespace WinterUniverse
         {
             switch (_itemType)
             {
-                case ItemType.Weapon:
-                    WeaponItemConfig weapon = (WeaponItemConfig)this;
-                    pawn.Equipment.Equip(weapon, fromInventory);
+                case ItemType.MeleeWeapon:
+                    MeleeWeaponItemConfig melee = (MeleeWeaponItemConfig)this;
+                    pawn.Equipment.EquipMeleeWeapon(melee, fromInventory);
                     break;
-                case ItemType.Equipment:
-                    EquipmentItemConfig equipment = (EquipmentItemConfig)this;
-                    pawn.Equipment.Equip(equipment, fromInventory);
+                case ItemType.RangedWeapon:
+                    RangedWeaponItemConfig ranged = (RangedWeaponItemConfig)this;
+                    pawn.Equipment.EquipRangedWeapon(ranged, fromInventory);
                     break;
-                case ItemType.Ammo:
+                case ItemType.Helmet:
+                    HelmetArmorItemConfig helmet = (HelmetArmorItemConfig)this;
+                    pawn.Equipment.EquipHelmet(helmet, fromInventory);
+                    break;
+                case ItemType.Chest:
+                    ChestArmorItemConfig chest = (ChestArmorItemConfig)this;
+                    pawn.Equipment.EquipChest(chest, fromInventory);
                     break;
                 case ItemType.Consumable:
                     ConsumableItemConfig consumable = (ConsumableItemConfig)this;
-                    pawn.Status.EffectHolder.ApplyEffects(consumable.Effects);
-                    break;
-                case ItemType.Resource:
+                    if (!fromInventory || pawn.Inventory.RemoveItem(this))
+                    {
+                        pawn.Status.EffectHolder.ApplyEffects(consumable.Effects);
+                    }
                     break;
             }
         }

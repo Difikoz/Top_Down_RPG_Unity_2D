@@ -15,20 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-Russian (ru)
   m_GUID: b3cf07205abfe0b48802a06d51099f1e
   m_SerializeEntries:
-  - m_GUID: 103f3236f2efbb243a7d936ee96dec52
-    m_Address: Consumable_Type_Names_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 11752101e23c2a442a5f4481fa3f0891
-    m_Address: Equipment_Type_Names_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 1aa03bf007971e04794d18931e2193d5
     m_Address: Equipment_Descriptions_ru
     m_ReadOnly: 1
@@ -59,27 +45,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 34c50d4ec0ad31d4c878b730fbf90160
     m_Address: Stat_Descriptions_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3c44690fe7748a840b4a289df31a7785
-    m_Address: Equipment_Type_Descriptions_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 431dfb4bf3de11b41bc896d6533c3eab
-    m_Address: Weapon_Type_Names_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4de55e78eb2e6c349ad066493ebfa4d2
-    m_Address: Weapon_Type_Descriptions_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru
@@ -150,13 +115,6 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d74e7daff1e45aa419f3a2d7c60019c5
     m_Address: Ammo_Names_ru
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-ru
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e4b426225ccda834f9d1ec4e2997a40f
-    m_Address: Consumable_Type_Descriptions_ru
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-ru

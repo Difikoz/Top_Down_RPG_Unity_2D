@@ -1,5 +1,4 @@
 using Lean.Pool;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -8,53 +7,81 @@ namespace WinterUniverse
 {
     public class FactionsStatusPageUI : StatusPageUI
     {
-        [SerializeField] private Transform _contentRoot;
-        [SerializeField] private GameObject _slotPrefab;
-        //[SerializeField] private TMP_Text _playerFactionNameText;
+        [Header("Info Bar")]
         [SerializeField] private Image _infoBarIconImage;
+        [SerializeField] private TMP_Text _infoBarNameText;
         [SerializeField] private TMP_Text _infoBarDescriptionText;
-
-        private List<FactionSlotUI> _slots;
+        [SerializeField] private Sprite _emptySprite;
+        [Header("Factions Bar")]
+        [SerializeField] private Transform _factionBarContentRoot;
+        [SerializeField] private GameObject _factionBarSlotPrefab;
+        [Header("Relationships Bar")]
+        [SerializeField] private Transform _relationshipBarEnemyContentRoot;
+        [SerializeField] private Transform _relationshipBarNeutralContentRoot;
+        [SerializeField] private Transform _relationshipBarAllyContentRoot;
+        [SerializeField] private GameObject _relationshipBarSlotPrefab;
 
         public override void Initialize()
         {
             base.Initialize();
-            _slots = new();
-            for (int i = 0; i < GameManager.StaticInstance.ConfigsManager.Factions.Count; i++)
+            foreach (FactionConfig config in GameManager.StaticInstance.ConfigsManager.Factions)
             {
-                _slots.Add(LeanPool.Spawn(_slotPrefab, _contentRoot).GetComponent<FactionSlotUI>());
+                LeanPool.Spawn(_factionBarSlotPrefab, _factionBarContentRoot).GetComponent<FactionSlotUI>().Initialize(config);
             }
         }
 
-        public override void Enable()
+        public void ShowFullInformation(FactionConfig config)
         {
-            base.Enable();
-            GameManager.StaticInstance.ControllersManager.Player.Status.OnFactionChanged += OnFactionChanged;
-            OnFactionChanged();
-        }
-
-        public override void Disable()
-        {
-            GameManager.StaticInstance.ControllersManager.Player.Status.OnFactionChanged -= OnFactionChanged;
-            base.Disable();
-        }
-
-        private void OnFactionChanged()
-        {
-            //_playerFactionNameText.text = GameManager.StaticInstance.ControllersManager.Player.Faction.Config.DisplayName;
-            int index = 0;
-            foreach (FactionRelationship fr in GameManager.StaticInstance.ControllersManager.Player.Status.Faction.Relationships)
+            if (config != null)
             {
-                ShowFullInformation(fr);
-                _slots[index].Initialize(fr);
-                index++;
+                _infoBarIconImage.sprite = config.Icon;
+                _infoBarNameText.text = config.DisplayName.GetLocalizedString();
+                _infoBarDescriptionText.text = config.Description.GetLocalizedString();
+                FillRelationshipBar(config);
+            }
+            else
+            {
+                _infoBarIconImage.sprite = _emptySprite;
+                _infoBarNameText.text = string.Empty;
+                _infoBarDescriptionText.text = string.Empty;
+                ClearRelationshipBar();
             }
         }
 
-        public void ShowFullInformation(FactionRelationship relationship)
+        private void FillRelationshipBar(FactionConfig config)
         {
-            _infoBarIconImage.sprite = relationship.Faction.Icon;
-            _infoBarDescriptionText.text = relationship.Faction.Description.GetLocalizedString();
+            ClearRelationshipBar();
+            foreach (FactionRelationship fr in config.Relationships)
+            {
+                switch (fr.State)
+                {
+                    case RelationshipState.Enemy:
+                        LeanPool.Spawn(_relationshipBarSlotPrefab, _relationshipBarEnemyContentRoot).GetComponent<BasicIconSlotUI>().SetIcon(fr.Faction.Icon);
+                        break;
+                    case RelationshipState.Neutral:
+                        LeanPool.Spawn(_relationshipBarSlotPrefab, _relationshipBarNeutralContentRoot).GetComponent<BasicIconSlotUI>().SetIcon(fr.Faction.Icon);
+                        break;
+                    case RelationshipState.Ally:
+                        LeanPool.Spawn(_relationshipBarSlotPrefab, _relationshipBarAllyContentRoot).GetComponent<BasicIconSlotUI>().SetIcon(fr.Faction.Icon);
+                        break;
+                }
+            }
+        }
+
+        private void ClearRelationshipBar()
+        {
+            while (_relationshipBarEnemyContentRoot.childCount > 0)
+            {
+                LeanPool.Despawn(_relationshipBarEnemyContentRoot.GetChild(0).gameObject);
+            }
+            while (_relationshipBarNeutralContentRoot.childCount > 0)
+            {
+                LeanPool.Despawn(_relationshipBarNeutralContentRoot.GetChild(0).gameObject);
+            }
+            while (_relationshipBarAllyContentRoot.childCount > 0)
+            {
+                LeanPool.Despawn(_relationshipBarAllyContentRoot.GetChild(0).gameObject);
+            }
         }
     }
 }

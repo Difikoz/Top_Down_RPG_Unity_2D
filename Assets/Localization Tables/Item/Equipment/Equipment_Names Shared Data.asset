@@ -23,22 +23,6 @@ MonoBehaviour:
     m_Key: Leather Chest
     m_Metadata:
       m_Items: []
-  - m_Id: 15211638784
-    m_Key: Leather Pants
-    m_Metadata:
-      m_Items: []
-  - m_Id: 17526894592
-    m_Key: Leather Gloves
-    m_Metadata:
-      m_Items: []
-  - m_Id: 19808595968
-    m_Key: Leather Boots
-    m_Metadata:
-      m_Items: []
-  - m_Id: 22157406208
-    m_Key: Leather Backpack
-    m_Metadata:
-      m_Items: []
   m_Metadata:
     m_Items: []
   m_KeyGenerator:
