@@ -8,39 +8,39 @@ namespace WinterUniverse
     public class ProjectileController : MonoBehaviour
     {
         [SerializeField] private Rigidbody2D _rb;
-        [SerializeField] private SpriteRenderer _spriteRenderer;
-        [SerializeField] private WeaponDamageCollider _collider;
 
         private PawnController _owner;
-        private RangedWeaponItemConfig _weaponConfig;
-        private AmmoItemConfig _ammoConfig;
+        private WeaponItemConfig _weaponConfig;
+        private GameObject _model;
+        private WeaponDamageCollider _damageCollider;
         private int _pierceCount;
 
-        public void Initialize(PawnController owner, RangedWeaponItemConfig weapon, AmmoItemConfig ammo)
+        public void Initialize(PawnController owner, WeaponItemConfig weapon)
         {
-            _collider.Initialize();
-            _collider.Initialize(owner, weapon.DamageTypes, ammo.DamageEffects, ammo.DamageMultiplier);
-            _collider.Enable();
+            _damageCollider.Initialize(owner, weapon.DamageTypes, weapon.UsingAmmo.DamageEffects);
+            _damageCollider.Enable();
             _owner = owner;
             _weaponConfig = weapon;
-            _ammoConfig = ammo;
             _pierceCount = 0;
-            _spriteRenderer.sprite = _ammoConfig.ProjectileSprite;
-            _rb.linearVelocity = transform.right * _weaponConfig.Force * _ammoConfig.ForceMultiplier;
+            _model = LeanPool.Spawn(_weaponConfig.UsingAmmo.AmmoPrefab, transform);
+            _damageCollider = GetComponentInChildren<WeaponDamageCollider>();
+            _damageCollider.Initialize(_owner, _weaponConfig.DamageTypes, _weaponConfig.UsingAmmo.DamageEffects);
+            _rb.linearVelocity = transform.right * _weaponConfig.Force;
             StartCoroutine(DespawnCoroutine());
-            _collider.OnHit += OnHit;
+            _damageCollider.OnHit += OnHit;
+            _damageCollider.Enable();
         }
 
         private IEnumerator DespawnCoroutine()
         {
-            yield return new WaitForSeconds(_weaponConfig.Range / _weaponConfig.Force * _ammoConfig.ForceMultiplier * 1.1f);
+            yield return new WaitForSeconds(_weaponConfig.Range / _weaponConfig.Force * 1.1f);
             Despawn();
         }
 
         private void OnHit()
         {
             _pierceCount++;
-            if (_pierceCount > _weaponConfig.PierceCount + _ammoConfig.PierceCount)
+            if (_pierceCount > _weaponConfig.PierceCount + _weaponConfig.UsingAmmo.PierceCount)
             {
                 Despawn();
             }
@@ -48,10 +48,11 @@ namespace WinterUniverse
 
         private void Despawn()
         {
-            _collider.OnHit -= OnHit;
+            _damageCollider.Disable();
+            _damageCollider.ClearDamagedTargets();
+            _damageCollider.OnHit -= OnHit;
             _rb.linearVelocity = Vector2.zero;
-            _collider.Disable();
-            _collider.ClearDamagedTargets();
+            LeanPool.Despawn(_model);
             LeanPool.Despawn(gameObject);
         }
     }

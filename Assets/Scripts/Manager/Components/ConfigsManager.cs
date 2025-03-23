@@ -9,9 +9,8 @@ namespace WinterUniverse
         [SerializeField] private List<StateKeyConfig> _states = new();
         [SerializeField] private List<StateCreatorConfig> _stateCreators = new();
         [SerializeField] private List<FactionConfig> _factions = new();
-        [SerializeField] private List<MeleeWeaponItemConfig> _meleeWeapons = new();
-        [SerializeField] private List<RangedWeaponItemConfig> _rangedWeapons = new();
-        [SerializeField] private List<EquipmentItemConfig> _armors = new();
+        [SerializeField] private List<WeaponItemConfig> _weapons = new();
+        [SerializeField] private List<EquipmentItemConfig> _equipments = new();
         [SerializeField] private List<AmmoItemConfig> _ammo = new();
         [SerializeField] private List<ConsumableItemConfig> _consumables = new();
         [SerializeField] private List<ResourceItemConfig> _resources = new();
@@ -27,15 +26,11 @@ namespace WinterUniverse
         {
             base.Initialize();
             _items = new();
-            foreach (MeleeWeaponItemConfig config in _meleeWeapons)
+            foreach (WeaponItemConfig config in _weapons)
             {
                 _items.Add(config);
             }
-            foreach (RangedWeaponItemConfig config in _rangedWeapons)
-            {
-                _items.Add(config);
-            }
-            foreach (EquipmentItemConfig config in _armors)
+            foreach (EquipmentItemConfig config in _equipments)
             {
                 _items.Add(config);
             }
@@ -89,9 +84,9 @@ namespace WinterUniverse
             return null;
         }
 
-        public MeleeWeaponItemConfig GetMeleeWeapon(string id)
+        public WeaponItemConfig GetWeapon(string id)
         {
-            foreach (MeleeWeaponItemConfig config in _meleeWeapons)
+            foreach (WeaponItemConfig config in _weapons)
             {
                 if (config.ID == id)
                 {
@@ -101,21 +96,9 @@ namespace WinterUniverse
             return null;
         }
 
-        public RangedWeaponItemConfig GetRangedWeapon(string id)
+        public EquipmentItemConfig GetEquipment(string id)
         {
-            foreach (RangedWeaponItemConfig config in _rangedWeapons)
-            {
-                if (config.ID == id)
-                {
-                    return config;
-                }
-            }
-            return null;
-        }
-
-        public EquipmentItemConfig GetArmor(string id)
-        {
-            foreach (EquipmentItemConfig config in _armors)
+            foreach (EquipmentItemConfig config in _equipments)
             {
                 if (config.ID == id)
                 {

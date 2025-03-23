@@ -39,6 +39,10 @@ namespace WinterUniverse
         {
             base.OnFixedUpdate();
             _player.Input.LookPoint = _camera.ScreenToWorldPoint(_cursorInput);
+        }
+
+        public void OnLateUpdate()
+        {
             transform.position = Vector3.Lerp(transform.position, _player.Animator.BodyPoint.position, _followSpeed * Time.fixedDeltaTime);
         }
     }

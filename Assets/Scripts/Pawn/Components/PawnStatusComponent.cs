@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 namespace WinterUniverse
@@ -92,6 +93,22 @@ namespace WinterUniverse
             }
         }
 
+        public void ApplyDamage(List<DamageType> damageTypes, PawnController source)
+        {
+            if (_stateHolder.CompareStateValue("Is Dead", true))
+            {
+                return;
+            }
+            if (source != null && UnityEngine.Random.value < source.Status.StatHolder.GetStat("EVADE").CurrentValue / 100f)
+            {
+                return;
+            }
+            foreach (DamageType dt in damageTypes)
+            {
+                ReduceHealthCurrent(dt.Damage, dt.Type, source);
+            }
+        }
+
         public void ReduceHealthCurrent(float value, DamageTypeConfig type, PawnController source)
         {
             if (_stateHolder.CompareStateValue("Is Dead", true))
@@ -156,6 +173,7 @@ namespace WinterUniverse
             {
                 return;
             }
+            _pawn.Animator.PlayAction("Death");
             _healthCurrent = 0f;
             OnHealthChanged?.Invoke(_healthCurrent, _statHolder.GetStat("HP MAX").CurrentValue);
             _stateHolder.SetStateValue("Is Dead", true);

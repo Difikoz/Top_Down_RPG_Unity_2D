@@ -19,6 +19,11 @@ namespace WinterUniverse
             _allEffects = new();
         }
 
+        public void ApplyEffects(List<EffectCreator> effects)
+        {
+            ApplyEffects(effects, _pawn);
+        }
+
         public void ApplyEffects(List<EffectCreator> effects, PawnController source)
         {
             foreach (EffectCreator effect in effects)

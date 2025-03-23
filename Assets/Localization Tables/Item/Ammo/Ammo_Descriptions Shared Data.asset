@@ -16,35 +16,11 @@ MonoBehaviour:
   m_TableCollectionNameGuidString: 95f7b3df5a0fd0541ae39f8cc78f93b7
   m_Entries:
   - m_Id: 32429256704
-    m_Key: 9x18 001
-    m_Metadata:
-      m_Items: []
-  - m_Id: 34975199232
-    m_Key: 9x18 002
-    m_Metadata:
-      m_Items: []
-  - m_Id: 37093322752
-    m_Key: 9x18 003
-    m_Metadata:
-      m_Items: []
-  - m_Id: 39341469696
-    m_Key: 9x18 004
+    m_Key: 9x18
     m_Metadata:
       m_Items: []
   - m_Id: 47730077696
-    m_Key: Arrow 001
-    m_Metadata:
-      m_Items: []
-  - m_Id: 50276020224
-    m_Key: Arrow 002
-    m_Metadata:
-      m_Items: []
-  - m_Id: 52125708288
-    m_Key: Arrow 003
-    m_Metadata:
-      m_Items: []
-  - m_Id: 53803429888
-    m_Key: Arrow 004
+    m_Key: Arrow
     m_Metadata:
       m_Items: []
   m_Metadata:

@@ -109,6 +109,11 @@ namespace WinterUniverse
             _uiManager.OnFixedUpdate();
         }
 
+        private void LateUpdate()
+        {
+            _cameraManager.OnLateUpdate();
+        }
+
         public void SetInputMode(InputMode mode)
         {
             _inputMode = mode;

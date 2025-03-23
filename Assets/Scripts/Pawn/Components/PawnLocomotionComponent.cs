@@ -5,8 +5,8 @@ namespace WinterUniverse
     public class PawnLocomotionComponent : PawnComponent
     {
         private Rigidbody2D _rb;
-        private Vector2 _moveVelocity;
-        private float _moveSpeed;
+        [SerializeField] private Vector2 _moveVelocity;
+        [SerializeField] private float _moveSpeed;
 
         public override void Initialize()
         {
@@ -18,6 +18,7 @@ namespace WinterUniverse
         {
             base.Enable();
             _pawn.Status.StatHolder.OnStatsChanged += OnStatsChanged;
+            OnStatsChanged();
         }
 
         public override void Disable()

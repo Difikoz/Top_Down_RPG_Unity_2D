@@ -27,19 +27,21 @@ namespace WinterUniverse
             base.Enable();
             _inputActions.Enable();
             _inputActions.Pawn.Interact.performed += ctx => OnInteractPerfomed();
-            _inputActions.Pawn.Interact.performed += ctx => _primaryActionInput = true;
-            _inputActions.Pawn.Interact.canceled += ctx => _primaryActionInput = false;
-            _inputActions.Pawn.Interact.performed += ctx => _secondaryActionInput = true;
-            _inputActions.Pawn.Interact.canceled += ctx => _secondaryActionInput = false;
+            _inputActions.Pawn.PrimaryAction.performed += ctx => _primaryActionInput = true;
+            _inputActions.Pawn.PrimaryAction.canceled += ctx => _primaryActionInput = false;
+            _inputActions.Pawn.SecondaryAction.performed += ctx => _secondaryActionInput = true;
+            _inputActions.Pawn.SecondaryAction.canceled += ctx => _secondaryActionInput = false;
+            _inputActions.Pawn.ReloadRangedWeapon.performed += ctx => OnReloadPerfomed();
         }
 
         public override void Disable()
         {
             _inputActions.Pawn.Interact.performed -= ctx => OnInteractPerfomed();
-            _inputActions.Pawn.Interact.performed -= ctx => _primaryActionInput = true;
-            _inputActions.Pawn.Interact.canceled -= ctx => _primaryActionInput = false;
-            _inputActions.Pawn.Interact.performed -= ctx => _secondaryActionInput = true;
-            _inputActions.Pawn.Interact.canceled -= ctx => _secondaryActionInput = false;
+            _inputActions.Pawn.PrimaryAction.performed -= ctx => _primaryActionInput = true;
+            _inputActions.Pawn.PrimaryAction.canceled -= ctx => _primaryActionInput = false;
+            _inputActions.Pawn.SecondaryAction.performed -= ctx => _secondaryActionInput = true;
+            _inputActions.Pawn.SecondaryAction.canceled -= ctx => _secondaryActionInput = false;
+            _inputActions.Pawn.ReloadRangedWeapon.performed -= ctx => OnReloadPerfomed();
             _inputActions.Disable();
             base.Disable();
         }
@@ -53,23 +55,13 @@ namespace WinterUniverse
                 return;
             }
             _input.MoveDirection = _inputActions.Pawn.Move.ReadValue<Vector2>();
-            if (_equipment.CurrentWeaponType == WeaponType.Melee)
-            {
-                if (_secondaryActionInput)
-                {
-                    _equipment.ToggleWeaponSlot(WeaponType.Ranged);
-                }
-            }
-            else if (_equipment.CurrentWeaponType == WeaponType.Ranged)
-            {
-                if (!_secondaryActionInput)
-                {
-                    _equipment.ToggleWeaponSlot(WeaponType.Melee);
-                }
-            }
             if (_primaryActionInput)
             {
-                _equipment.PerformWeaponAction();
+                _equipment.WeaponSlot.PerformAttack();
+            }
+            if (_secondaryActionInput)
+            {
+                //_equipment.WeaponSlot.PerformAttack();
             }
         }
 
@@ -79,6 +71,15 @@ namespace WinterUniverse
             {
                 return;
             }
+        }
+
+        private void OnReloadPerfomed()
+        {
+            if (GameManager.StaticInstance.InputMode == InputMode.UI)
+            {
+                return;
+            }
+            _equipment.WeaponSlot.ReloadWeapon();
         }
     }
 }

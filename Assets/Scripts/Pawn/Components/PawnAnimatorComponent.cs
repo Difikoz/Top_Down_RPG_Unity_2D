@@ -29,14 +29,9 @@ namespace WinterUniverse
             _animator.SetFloat(name, value);
         }
 
-        public void EnableMeleeWeaponCollider()
+        public void ChangeController(AnimatorOverrideController controller)
         {
-            _pawn.Equipment.MeleeWeaponSlot.EnableDamageCollider();
-        }
-
-        public void DisableMeleeWeaponCollider()
-        {
-            _pawn.Equipment.MeleeWeaponSlot.DisableDamageCollider();
+            _animator.runtimeAnimatorController = controller;
         }
     }
 }

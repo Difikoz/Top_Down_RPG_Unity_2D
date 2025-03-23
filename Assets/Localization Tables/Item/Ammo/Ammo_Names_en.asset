@@ -19,35 +19,11 @@ MonoBehaviour:
     m_Items: []
   m_TableData:
   - m_Id: 169868210176
-    m_Localized: 9x18 J
-    m_Metadata:
-      m_Items: []
-  - m_Id: 174557442048
-    m_Localized: 9x18 N
-    m_Metadata:
-      m_Items: []
-  - m_Id: 177174687744
-    m_Localized: 9x18 P
-    m_Metadata:
-      m_Items: []
-  - m_Id: 179624161280
-    m_Localized: 9x18 S
+    m_Localized: 9x18
     m_Metadata:
       m_Items: []
   - m_Id: 256572862464
-    m_Localized: Wooden Arrow
-    m_Metadata:
-      m_Items: []
-  - m_Id: 261878657024
-    m_Localized: Stone Arrow
-    m_Metadata:
-      m_Items: []
-  - m_Id: 263854174208
-    m_Localized: Copper Arrow
-    m_Metadata:
-      m_Items: []
-  - m_Id: 265397678080
-    m_Localized: Steel Arrow
+    m_Localized: Arrow
     m_Metadata:
       m_Items: []
   references:

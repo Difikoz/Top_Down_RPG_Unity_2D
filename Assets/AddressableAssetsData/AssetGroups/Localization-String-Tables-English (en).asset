@@ -15,13 +15,6 @@ MonoBehaviour:
   m_GroupName: Localization-String-Tables-English (en)
   m_GUID: 84cb94a41dc52384e8b414760da2cbf3
   m_SerializeEntries:
-  - m_GUID: 020b54b36d133d5499bfa816795c0c47
-    m_Address: Gloves_Names_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 13f752b5eca25604083b1581a5a32465
     m_Address: Faction_Descriptions_en
     m_ReadOnly: 1
@@ -29,36 +22,22 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1680257af56b3fd40a39a00599dfd551
-    m_Address: Medical_Names_en
+  - m_GUID: 19e61006630b07b42b29d6abb9cc982d
+    m_Address: Equipment_Type_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1db30f22e66af024da92a92c35a53644
-    m_Address: Food_Descriptions_en
+  - m_GUID: 1b6db23c73cb04a42828fe829b218a2d
+    m_Address: Consumable_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1f81438b70592764c84df21ffa3cf26e
-    m_Address: Boots_Descriptions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 1f9665542ddf1bb4abbeabd2506051c0
-    m_Address: Food_Names_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 229fe713748a029439e2c0404751e63f
-    m_Address: Boots_Names_en
+  - m_GUID: 24ab96fbe43744c4caa7c2a93ad3d402
+    m_Address: Equipment_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -71,29 +50,8 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 291459d4d495922499fdc59a37e40e10
-    m_Address: Ranged_Weapon_Descriptions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 3016854b483f09341b1ce97354ba6e07
-    m_Address: Belt_Descriptions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 32b0765250f99864f91bfe25bbd18b22
-    m_Address: Drink_Names_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 4501b899d12bfcd4aa7a24ba3a9dfa56
-    m_Address: Belt_Names_en
+  - m_GUID: 297bd3771e349964196390cddd0011fe
+    m_Address: Weapon_Type_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -106,8 +64,8 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 6322cf3420f9ef648822243b5bda0b21
-    m_Address: Melee_Weapon_Descriptions_en
+  - m_GUID: 5c976f2d4f7bc5f4cb3de76566e11302
+    m_Address: Weapon_Type_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -120,15 +78,8 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 7f005b4198b0b0e4d996e79b8d32228c
-    m_Address: Chest_Descriptions_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 803c996f3160e834492bd062be79e6b1
-    m_Address: Medical_Descriptions_en
+  - m_GUID: 6fabc59876fec8044914866ac10455f0
+    m_Address: Consumable_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -141,22 +92,15 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9079757226bf7d740b6bb8ae485f5b27
-    m_Address: Gloves_Descriptions_en
+  - m_GUID: 858a84ec8ba170441a55e5342f9fdb12
+    m_Address: Button_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 92c7061a13e5a8440a4afa2d73fe7572
-    m_Address: Helmet_Names_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9a09c66db56a04048b17a7d875e7c48e
-    m_Address: Drink_Descriptions_en
+  - m_GUID: 9ac8dd851ebfa1b45b87ace11e376095
+    m_Address: Consumable_Type_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -169,15 +113,8 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: 9ec04d590ab7e0645b04d28a451f0b69
-    m_Address: Melee_Weapon_Names_en
-    m_ReadOnly: 1
-    m_SerializedLabels:
-    - Locale-en
-    - Preload
-    FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: aa7b4d388a59d5542bb56f1fb721db37
-    m_Address: Ranged_Weapon_Names_en
+  - m_GUID: a917258cc7d1ce34ab20bfeb8413e8f6
+    m_Address: Equipment_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -190,8 +127,8 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: b67ed5b6a17261c41b748003b30370ff
-    m_Address: Chest_Names_en
+  - m_GUID: b107af26187b61d4fbec1674ad933de3
+    m_Address: Consumable_Type_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
@@ -204,22 +141,22 @@ MonoBehaviour:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: e38e576ac33a07d4195fcc5e173258b6
-    m_Address: Pants_Descriptions_en
+  - m_GUID: c425f73ac03199243876431222332cfc
+    m_Address: Weapon_Names_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fd250f2e77c1c3a48a1b71fa5f2d1c2c
-    m_Address: Pants_Names_en
+  - m_GUID: ccc90e6994dc69142a9cfb80b8634bc0
+    m_Address: Equipment_Type_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en
     - Preload
     FlaggedDuringContentUpdateRestriction: 0
-  - m_GUID: fe4af4ba2f7174249a15915c5f0e5d03
-    m_Address: Helmet_Descriptions_en
+  - m_GUID: d80d49b62a23c0042b174c391cb5ceab
+    m_Address: Weapon_Descriptions_en
     m_ReadOnly: 1
     m_SerializedLabels:
     - Locale-en

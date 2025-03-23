@@ -8,10 +8,9 @@ namespace WinterUniverse
     {
         public Action OnHit;
 
-        [SerializeField] private CapsuleCollider2D _collider;
+        [SerializeField] private Collider2D _collider;
 
         private PawnController _owner;
-        private float _damageMultiplier;
 
         public override void Enable()
         {
@@ -25,18 +24,12 @@ namespace WinterUniverse
             base.Disable();
         }
 
-        public void Initialize(PawnController owner, List<DamageType> damageTypes, List<EffectCreator> damageEffects, float damageMultiplier = 1f)
+        public void Initialize(PawnController owner, List<DamageType> damageTypes, List<EffectCreator> damageEffects)
         {
+            Initialize();
             _owner = owner;
             _damageTypes = new(damageTypes);
             _damageEffects = new(damageEffects);
-            _damageMultiplier = damageMultiplier;
-        }
-
-        public void ChangeCollider(Vector2 size, Vector2 offset)
-        {
-            _collider.size = size;
-            _collider.offset = offset;
         }
 
         public override bool CanHitTarget(PawnController target)
@@ -46,14 +39,7 @@ namespace WinterUniverse
 
         public override void OnHitTarget(Collider2D collider, PawnController target)
         {
-            if (UnityEngine.Random.value < target.Status.StatHolder.GetStat("EVADE").CurrentValue / 100f)
-            {
-                return;
-            }
-            foreach (DamageType dt in _damageTypes)
-            {
-                target.Status.ReduceHealthCurrent(dt.Damage * _damageMultiplier, dt.Type, _owner);
-            }
+            target.Status.ApplyDamage(_damageTypes, _owner);
             target.Status.EffectHolder.ApplyEffects(_damageEffects, _owner);
             OnHit?.Invoke();
         }

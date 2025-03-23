@@ -19,7 +19,7 @@ namespace WinterUniverse
         public void Initialize(FactionRelationship relationship)
         {
             _relationship = relationship;
-            _infoText.text = $"{_relationship.Faction.DisplayName}: {_relationship.State}";
+            _infoText.text = $"{_relationship.Faction.DisplayName.GetLocalizedString()}";
             switch (_relationship.State)
             {
                 case RelationshipState.Enemy:

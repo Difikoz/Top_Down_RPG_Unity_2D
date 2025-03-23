@@ -12,12 +12,14 @@ namespace WinterUniverse
         private int _currentPageIndex;
         private EquipmentStatusPageUI _equipmentPage;
         private InventoryStatusPageUI _inventoryPage;
+        private StatsStatusPageUI _statsPage;
         private JournalStatusPageUI _journalPage;
         private FactionsStatusPageUI _factionsPage;
         private MapStatusPageUI _mapPage;
 
         public EquipmentStatusPageUI EquipmentPage => _equipmentPage;
         public InventoryStatusPageUI InventoryPage => _inventoryPage;
+        public StatsStatusPageUI StatsPage => _statsPage;
         public JournalStatusPageUI JournalPage => _journalPage;
         public FactionsStatusPageUI FactionsPage => _factionsPage;
         public MapStatusPageUI MapPage => _mapPage;
@@ -27,6 +29,7 @@ namespace WinterUniverse
             base.Initialize();
             _equipmentPage = GetComponentInChildren<EquipmentStatusPageUI>();
             _inventoryPage = GetComponentInChildren<InventoryStatusPageUI>();
+            _statsPage = GetComponentInChildren<StatsStatusPageUI>();
             _journalPage = GetComponentInChildren<JournalStatusPageUI>();
             _factionsPage = GetComponentInChildren<FactionsStatusPageUI>();
             _mapPage = GetComponentInChildren<MapStatusPageUI>();

@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b11a58205ec3474ca216360e9fa74a8, type: 3}
+  m_Name: Weapon_Type_Descriptions Shared Data
+  m_EditorClassIdentifier: 
+  m_TableCollectionName: Weapon_Type_Descriptions
+  m_TableCollectionNameGuidString: 4d8499b94ced58d4a9f109d0bef9dec2
+  m_Entries:
+  - m_Id: 34438328320
+    m_Key: Axe
+    m_Metadata:
+      m_Items: []
+  - m_Id: 53233004544
+    m_Key: Bow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 66755440640
+    m_Key: Crossbow
+    m_Metadata:
+      m_Items: []
+  - m_Id: 80751833088
+    m_Key: Dagger
+    m_Metadata:
+      m_Items: []
+  - m_Id: 97063481344
+    m_Key: Mace
+    m_Metadata:
+      m_Items: []
+  - m_Id: 125249204224
+    m_Key: Pistol
+    m_Metadata:
+      m_Items: []
+  - m_Id: 139576946688
+    m_Key: Rifle
+    m_Metadata:
+      m_Items: []
+  - m_Id: 154143764480
+    m_Key: Shotgun
+    m_Metadata:
+      m_Items: []
+  - m_Id: 170891620352
+    m_Key: SMG
+    m_Metadata:
+      m_Items: []
+  - m_Id: 186259550208
+    m_Key: Spear
+    m_Metadata:
+      m_Items: []
+  - m_Id: 218182397952
+    m_Key: Sword
+    m_Metadata:
+      m_Items: []
+  - m_Id: 7021733556224
+    m_Key: Hammer
+    m_Metadata:
+      m_Items: []
+  m_Metadata:
+    m_Items: []
+  m_KeyGenerator:
+    rid: 8657956402185896147
+  references:
+    version: 2
+    RefIds:
+    - rid: 8657956402185896147
+      type: {class: DistributedUIDGenerator, ns: UnityEngine.Localization.Tables, asm: Unity.Localization}
+      data:
+        m_CustomEpoch: 1742726811832

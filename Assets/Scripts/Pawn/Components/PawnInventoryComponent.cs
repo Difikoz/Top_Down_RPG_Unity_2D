@@ -148,25 +148,6 @@ namespace WinterUniverse
             return amount;
         }
 
-        public bool GetAmmo(RangedWeaponItemConfig weapon, out AmmoItemConfig ammo)
-        {
-            ammo = null;
-            int amount = 0;
-            foreach (ItemStack stack in _stacks)
-            {
-                if (stack.Item.ItemType == ItemType.Ammo)
-                {
-                    AmmoItemConfig item = (AmmoItemConfig)stack.Item;
-                    if (weapon.UsingAmmo.Contains(item) && stack.Amount > amount)
-                    {
-                        ammo = item;
-                        amount = stack.Amount;
-                    }
-                }
-            }
-            return ammo != null;
-        }
-
         private void UpdateInventory()
         {
             OnInventoryChanged?.Invoke();

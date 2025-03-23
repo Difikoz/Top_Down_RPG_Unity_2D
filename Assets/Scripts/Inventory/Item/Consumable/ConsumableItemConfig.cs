@@ -3,12 +3,18 @@ using UnityEngine;
 
 namespace WinterUniverse
 {
-    public abstract class ConsumableItemConfig : ItemConfig
+    [CreateAssetMenu(fileName = "Consumable", menuName = "Winter Universe/Item/Consumable/New Consumable")]
+    public class ConsumableItemConfig : ItemConfig
     {
-        [SerializeField] protected ConsumableType _consumableType;
-        [SerializeField] protected List<EffectCreator> _effects = new();
+        [SerializeField] private ConsumableTypeConfig _consumableType;
+        [SerializeField] private List<EffectCreator> _effects = new();
 
-        public ConsumableType ConsumableType => _consumableType;
+        public ConsumableTypeConfig ConsumableType => _consumableType;
         public List<EffectCreator> Effects => _effects;
+
+        private void OnValidate()
+        {
+            _itemType = ItemType.Consumable;
+        }
     }
 }

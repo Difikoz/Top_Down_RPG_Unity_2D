@@ -68,24 +68,26 @@ MonoBehaviour:
   _factions:
   - {fileID: 11400000, guid: 722ba0eb4f91e0249af31ac12749cf44, type: 2}
   - {fileID: 11400000, guid: e31193ee7d63110468095536910ae5a8, type: 2}
-  _meleeWeapons:
-  - {fileID: 11400000, guid: be2f34485b5f25d4b8d4b8e265188829, type: 2}
-  - {fileID: 11400000, guid: 25c44c2b7d9b0324aaeeca3e2e80e552, type: 2}
-  _rangedWeapons:
-  - {fileID: 11400000, guid: 795ec065d51d4c94ba25b7cd0fe63d57, type: 2}
-  - {fileID: 11400000, guid: f37f6a3f102d02b4fb6c3c31ee182f44, type: 2}
-  _armors:
-  - {fileID: 11400000, guid: 7b7f57495efcea346a0ec8194cab992e, type: 2}
+  _weapons:
+  - {fileID: 11400000, guid: 577d574f35265ca4ebce050bc1afab6b, type: 2}
+  - {fileID: 11400000, guid: 57dd875534df33242bec0e1aa338f007, type: 2}
+  - {fileID: 11400000, guid: 24e30d0d1924b27408f08559e72f9a0f, type: 2}
+  - {fileID: 11400000, guid: 26777e3f7c2c64443b974eaaadc32b7d, type: 2}
+  - {fileID: 11400000, guid: 8a9094c4403248b48917fb159b005c19, type: 2}
+  - {fileID: 11400000, guid: 8c5685918daad4149ac4e9f055d200b9, type: 2}
+  _equipments:
+  - {fileID: 11400000, guid: d5ef1e15a2f858943a66ba6799dd3ad0, type: 2}
+  - {fileID: 11400000, guid: 277e0d3862991aa4fadc7f89bd03d7bc, type: 2}
+  - {fileID: 11400000, guid: 74e817c1687e97a42b01d4803d9a8172, type: 2}
+  - {fileID: 11400000, guid: c9c8301cbc1a6784883b546530de2280, type: 2}
+  - {fileID: 11400000, guid: 0c7cebaf66b8548459b64a18035475e4, type: 2}
+  - {fileID: 11400000, guid: 5f6829b99fddf894e9596f504471183f, type: 2}
   _ammo:
   - {fileID: 11400000, guid: 0bf9b135591a32f4c8d9feb36e1f72dc, type: 2}
-  - {fileID: 11400000, guid: 34263df29bfc807458ff7ca305f0c8dc, type: 2}
-  - {fileID: 11400000, guid: 60b786b89529eaa4d9fba9dec9874de0, type: 2}
-  - {fileID: 11400000, guid: 6d08f5a4471de424fa7e8a2d01a8f4a9, type: 2}
   - {fileID: 11400000, guid: 19247dc628be4b24b87971575c7b6948, type: 2}
-  - {fileID: 11400000, guid: 9c917b37c7d16ec44bbbb514b29a5d4a, type: 2}
-  - {fileID: 11400000, guid: 96da13a00e567114da8571b56adc4f3d, type: 2}
-  - {fileID: 11400000, guid: b51a336fdfb09d14f84141510df2c776, type: 2}
   _consumables:
-  - {fileID: 11400000, guid: e5f192cf87c912b4c9b7bda109d6bb4c, type: 2}
+  - {fileID: 11400000, guid: f889c30e8f9572143be10faea148b82e, type: 2}
+  - {fileID: 11400000, guid: 7d2863200879f1340ae5f2faaa37e8de, type: 2}
+  - {fileID: 11400000, guid: aa53a9329a1996e48a165b66d38125d7, type: 2}
   _resources:
   - {fileID: 11400000, guid: ebce06abcc4513c4ba1b3f7f4de951d8, type: 2}

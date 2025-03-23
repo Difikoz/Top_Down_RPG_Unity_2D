@@ -35,7 +35,7 @@ MonoBehaviour:
   _baseValue: 100
   _minValue: 0
   _maxValue: 999999
-  _isPercent: 0
+  _isPercent: 1
   references:
     version: 2
     RefIds: []
